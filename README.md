@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Madalitso Saulos
 
-## Welcome to My Digital Space 
+# Welcome to My Digital Space 
 
 I'm a **Computer Systems & Security professional**, **Software Developer**, and **Cybersecurity Enthusiast** with a passion for building secure, scalable, and impactful digital solutions.
 
@@ -17,6 +17,5 @@ I enjoy collaborating with developers, researchers, and organizations to build s
 
 Feel free to explore my repositories, contribute to projects, or reach out for collaboration opportunities.
 
-⭐ Follow my GitHub profile to stay updated with my latest projects and activities.
-
-📫 Connect with me on LinkedIn and visit my portfolio website through the links available on the Left sidebar.
+-- Follow my GitHub profile to stay updated with my latest projects and activities.
+-- Connect with me on LinkedIn and visit my portfolio website through the links available on the Left sidebar.
