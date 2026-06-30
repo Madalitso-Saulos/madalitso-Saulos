@@ -4,25 +4,12 @@
 
 I'm a **Computer Systems & Security professional**, **Software Developer**, and **Cybersecurity Enthusiast** with a passion for building secure, scalable, and impactful digital solutions.
 
-My interests span across **Cybersecurity**, **Digital Forensics**, **Networking**, and **Full-Stack Web Development**, where I continuously expand my skills to solve real-world challenges through technology.
-
-## 🚀 What I Do
-
-I am committed to:
+My interests span across **Cybersecurity**, **Digital Forensics**, **Networking**, and **Full-Stack Web Development**, where I continuously expand my skills to solve real-world challenges through technology. I am committed to:
 
 - 🔐 Designing and securing enterprise systems, applications, and networks against evolving cyber threats.
 - 🛡️ Applying cybersecurity and digital forensics techniques to investigate, analyze, and mitigate security incidents.
 - 🌐 Building modern, responsive, and scalable web applications that deliver exceptional user experiences.
 - 💡 Continuously learning and embracing emerging technologies to create innovative digital products.
-
-## 🛠️ Technical Interests
-
-- Cybersecurity
-- Digital Forensics
-- Secure Software Development
-- Computer Networking
-- Full-Stack Web Development
-- Cloud Computing
 
 ## 🤝 Let's Connect
 
