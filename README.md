@@ -1,12 +1,10 @@
-##👋 Hi, I'm Madalitso Saulos
+# 👋 Hi, I'm Madalitso Saulos
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=Cybersecurity+Enthusiast;Software+Developer;Computer+Systems+%26+Security;Always+Learning+New+Technologies&center=true&width=600&height=50">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=Cybersecurity+Enthusiast;Software+Developer;Computer+Systems+%26+Security ;Always+Learning+New+Technologies&center=true&width=600&height=30">
 </p>
 
-Welcome to my digital space! I'm a **Computer Systems & Security professional**, **Software Developer**, and **Cybersecurity Enthusiast** with a passion for building secure, scalable, and impactful digital solutions.
-
-I am committed to:
+Welcome to my digital space! I'm a **Computer Systems & Security professional**, **Software Developer**, and **Cybersecurity Enthusiast** with a passion for building secure, scalable, and impactful digital solutions. I am committed to:
 
 - 🔐 Designing and securing enterprise systems, applications, and networks against evolving cyber threats.
 - 🛡️ Applying cybersecurity and digital forensics techniques to investigate, analyze, and mitigate security incidents.
