@@ -1,13 +1,10 @@
 ## 👋 Hi, I'm Madalitso Saulos
 
-
-
-
--- Welcome to My Digital Space 
+--  **Welcome to My Digital Space **
 
 I'm a **Computer Systems & Security professional**, **Software Developer**, and **Cybersecurity Enthusiast** with a passion for building secure, scalable, and impactful digital solutions.
 
-My interests span across **Cybersecurity**, **Digital Forensics**, **Networking**, and **Full-Stack Web Development**, where I continuously expand my skills to solve real-world challenges through technology. I am committed to:
+ I am committed to:
 
 - 🔐 Designing and securing enterprise systems, applications, and networks against evolving cyber threats.
 - 🛡️ Applying cybersecurity and digital forensics techniques to investigate, analyze, and mitigate security incidents.
@@ -20,4 +17,4 @@ I enjoy collaborating with developers, researchers, and organizations to build s
 
 -- Connect with me on LinkedIn and visit my portfolio website through the links available on the Left sidebar.
 
-Thanks for stopping by! Feel free to check out my projects below 👇 and reach out if you'd like to collaborate.
+### Thanks for stopping by! Feel free to check out my projects below 👇 and reach out if you'd like to collaborate.
