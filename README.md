@@ -14,12 +14,10 @@ My interests span across **Cybersecurity**, **Digital Forensics**, **Networking*
 - 🌐 Building modern, responsive, and scalable web applications that deliver exceptional user experiences.
 - 💡 Continuously learning and embracing emerging technologies to create innovative digital products.
 
-##  Let's Connect
-
 I enjoy collaborating with developers, researchers, and organizations to build secure and innovative technology solutions that make a positive impact.
-
-Feel free to explore my repositories, contribute to projects, or reach out for collaboration opportunities.
 
 -- Follow my GitHub profile to stay updated with my latest projects and activities.
 
 -- Connect with me on LinkedIn and visit my portfolio website through the links available on the Left sidebar.
+
+Thanks for stopping by! Feel free to check out my projects below 👇 and reach out if you'd like to collaborate.
