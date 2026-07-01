@@ -119,7 +119,6 @@ I'm always open to collaborating on exciting projects, discussing cybersecurity 
 - 💬 Ask me about: [Topics you're knowledgeable about]
 
 ---
-
 ## 👀 Visitor Count
 
 <p align="center">
