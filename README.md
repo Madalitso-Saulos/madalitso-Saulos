@@ -1,4 +1,7 @@
 ## 👋 Hi, I'm Madalitso Saulos
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=Cybersecurity+Enthusiast;Software+Developer;Computer+Systems+%26+Security;Always+Learning+New+Technologies&center=true&width=600&height=50">
+</p>
 
 --  **Welcome to My Digital Space **
 
