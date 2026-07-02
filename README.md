@@ -6,7 +6,7 @@
 
 -- Welcome to my digital space! 
 
-I'm a **Computer Systems & Security professional**, **Software Developer**, and **Cybersecurity Enthusiast** with a passion for building secure, scalable, and impactful digital solutions. I am committed to:
+I'm a **Computer Systems & Security professional**, **Software Developer**, and ** Computer Networking Enthusiast** with a passion for building secure, scalable, and impactful digital solutions. I am committed to:
 
 - 🔐 Designing and securing enterprise systems, applications, and networks against evolving cyber threats.
 - 🛡️ Applying cybersecurity and digital forensics techniques to investigate, analyze, and mitigate security incidents.
