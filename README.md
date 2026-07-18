@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="fingerprint_scanning_bg_branded.svg" width="100%" alt="Animated digital fingerprint and network hero banner"/>
+<img src="cybercafe-scanning-banner.svg" width="100%" alt="Animated digital fingerprint and network hero banner"/>
 
 </div>
 
