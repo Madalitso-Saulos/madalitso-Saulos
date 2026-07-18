@@ -7,42 +7,37 @@
 <stop offset="0%" stop-color="#0a0f14"/>
 <stop offset="100%" stop-color="#000000"/>
 </radialGradient>
-
 <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
 <stop offset="0%" stop-color="#b5342c"/>
 <stop offset="100%" stop-color="#3ab0ff"/>
 </linearGradient>
-
 <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
 <stop offset="0%" stop-color="#3ab0ff" stop-opacity="0"/>
 <stop offset="50%" stop-color="#3ab0ff" stop-opacity="0.55"/>
 <stop offset="100%" stop-color="#3ab0ff" stop-opacity="0"/>
 </linearGradient>
-
 <filter id="nodeGlow" x="-80%" y="-80%" width="260%" height="260%">
 <feGaussianBlur stdDeviation="2.2" result="blur"/>
 <feMerge>
+  
 <feMergeNode in="blur"/>
 <feMergeNode in="SourceGraphic"/>
 </feMerge>
 </filter>
-
+  
 <filter id="textGlowRed" x="-50%" y="-50%" width="200%" height="200%">
 <feDropShadow dx="0" dy="0" stdDeviation="1.4" flood-color="#b5342c" flood-opacity="0.55"/>
 </filter>
-
 <filter id="textGlowWhite" x="-50%" y="-50%" width="200%" height="200%">
 <feDropShadow dx="0" dy="0" stdDeviation="1.2" flood-color="#e8e8e8" flood-opacity="0.35"/>
 </filter>
-
 <clipPath id="frame">
 <rect x="0" y="0" width="800" height="260" rx="12"/>
 </clipPath>
 </defs>
-
 <g clip-path="url(#frame)">
 <rect x="0" y="0" width="800" height="260" fill="url(#bgGrad)"/>
-
+  
 <g stroke="url(#lineGrad)" stroke-width="0.7">
 <line x1="380" y1="30" x2="450" y2="80"><animate attributeName="opacity" values="0.15;0.5;0.15" dur="3.2s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" repeatCount="indefinite"/></line>
 <line x1="380" y1="30" x2="500" y2="45"><animate attributeName="opacity" values="0.45;0.1;0.45" dur="2.6s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" repeatCount="indefinite"/></line>
