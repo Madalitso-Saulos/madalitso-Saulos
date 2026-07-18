@@ -164,28 +164,9 @@ $ python3 recon.py --target 10.0.0.0/24 --verbose
 
 <br/>
 
-<!-- ================= CONNECT / FOOTER ================= -->
-## `~$` connect
-
-<div align="center">
-
-<a href="https://github.com/madalitso-saulos">
-<img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=00BFFF&labelColor=0D1117" alt="GitHub"/>
-</a>
-<a href="https://linkedin.com/in/madalitso-saulos">
-<img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=00BFFF&labelColor=0D1117" alt="LinkedIn"/>
-</a>
-<a href="mailto:madalitso.saulos@example.com">
-<img src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=00BFFF&labelColor=0D1117" alt="Email"/>
-</a>
-<a href="https://madalitsosaulos.dev">
-<img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=vercel&logoColor=00BFFF&labelColor=0D1117" alt="Portfolio"/>
-</a>
-
 <br/><br/>
 
 <sub> Securing systems, one commit at a time.</sub>
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=120&color=00BFFF&section=footer" width="100%"/>
