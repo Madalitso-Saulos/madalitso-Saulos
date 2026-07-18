@@ -55,7 +55,7 @@
 > role         : Software Developer / Network Engineer / Cybersecurity Student
 > focus        : Secure systems, resilient networks, clean code
 > currently    : Studying cybersecurity while shipping full-stack + network tooling
-> status       : Open to collaboration on open-source security & dev projects
+> status       : Open to hiring or collaboration on open-source security & dev projects
 ```
 
 <br/>
@@ -110,7 +110,7 @@
 <tr>
 <td width="50%" valign="top">
 
-### 🛰️ Network Sentinel
+###  Network Sentinel
 Real-time network topology scanner and packet-flow visualizer built for SOC-style monitoring.
 
 `Python` `Scapy` `Sockets` `Flask`
@@ -118,7 +118,7 @@ Real-time network topology scanner and packet-flow visualizer built for SOC-styl
 </td>
 <td width="50%" valign="top">
 
-### 🔐 SecureAuth Toolkit
+###  SecureAuth Toolkit
 A hardened authentication and session-management library with fingerprint-style multi-factor verification.
 
 `TypeScript` `Node.js` `JWT` `PostgreSQL`
@@ -184,7 +184,7 @@ $ python3 recon.py --target 10.0.0.0/24 --verbose
 
 <br/><br/>
 
-<sub>⚡ Securing systems, one commit at a time.</sub>
+<sub> Securing systems, one commit at a time.</sub>
 
 </div>
 
