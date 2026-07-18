@@ -1,148 +1,256 @@
-<svg width="600" height="160" viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg" role="img">
-  <title>Cybercafe Saulos Techspace</title>
-  <desc>Professional GitHub banner with fingerprint scanning interface and welcome message</desc>
-  
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
-    <radialGradient id="bgGlow" cx="70%" cy="40%" r="75%">
-      <stop offset="0%" stop-color="#0f2a4a"/>
-      <stop offset="55%" stop-color="#081a33"/>
-      <stop offset="100%" stop-color="#030b18"/>
+    <!-- Background gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#0a1628"/>
     </radialGradient>
-    <linearGradient id="fpStroke" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#7ae4ff"/>
-      <stop offset="40%" stop-color="#3acce8"/>
-      <stop offset="100%" stop-color="#1a7aaa"/>
-    </linearGradient>
-    <linearGradient id="fpStrokeDark" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#5fc8e0"/>
-      <stop offset="50%" stop-color="#2aadc8"/>
-      <stop offset="100%" stop-color="#0f6a8f"/>
-    </linearGradient>
-    <linearGradient id="beamGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8cf0ff" stop-opacity="0"/>
-      <stop offset="35%" stop-color="#c8faff" stop-opacity="0.9"/>
-      <stop offset="65%" stop-color="#c8faff" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#3acce8" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#d4feff" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#d4feff" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
-    <filter id="bigGlow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="6"/>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
-    <filter id="haloGlow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="8"/>
-    </filter>
-    <clipPath id="fpClip">
-      <circle cx="430" cy="80" r="50"/>
-    </clipPath>
-    
-    <style>
-      .scanline { animation: scan 2.8s ease-in-out infinite; }
-      @keyframes scan { 0%,100% { transform: translateY(-42px); } 50% { transform: translateY(42px); } }
-      .pulseWord { animation: pulseW 1.8s ease-in-out infinite; }
-      @keyframes pulseW { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
-      .dotBlink { animation: blink 1.4s steps(1) infinite; }
-      @keyframes blink { 0%,32% { opacity: 1; } 33%,100% { opacity: 0; } }
-      .dotBlink2 { animation: blink 1.4s steps(1) infinite 0.45s; }
-      .codeFlicker text { animation: flick 4s ease-in-out infinite; }
-      @keyframes flick { 0%,100% { opacity: 0.5; } 50% { opacity: 0.9; } }
-      .ring { animation: ringPulse 3s ease-in-out infinite; }
-      @keyframes ringPulse { 0%,100% { opacity: 0.3; } 50% { opacity: 0.8; } }
-      .haloPulse { animation: haloP 2.6s ease-in-out infinite; }
-      @keyframes haloP { 0%,100% { opacity: 0.2; } 50% { opacity: 0.5; } }
-      .fp-extra { animation: fpFade 5s ease-in-out infinite; }
-      @keyframes fpFade { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
-    </style>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2a5a8a" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+
+    <!-- Hex pattern -->
+    <pattern id="hexPattern" width="30" height="26" patternUnits="userSpaceOnUse">
+      <path d="M15 0 L30 8.66 L30 17.32 L15 26 L0 17.32 L0 8.66 Z" fill="none" stroke="#1a6aaa" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+
+    <!-- Gradient for network lines -->
+    <linearGradient id="netGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a9eff"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </linearGradient>
+
+    <linearGradient id="netGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6aafff"/>
+      <stop offset="100%" stop-color="#2a7aff"/>
+    </linearGradient>
+
+    <!-- Fingerprint gradient -->
+    <linearGradient id="fpGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4af0ff"/>
+      <stop offset="100%" stop-color="#0066ff"/>
+    </linearGradient>
+
+    <!-- Code gradient -->
+    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#4a9eff"/>
+    </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect x="0" y="0" width="600" height="160" fill="url(#bgGlow)"/>
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  <rect width="800" height="600" fill="url(#hexPattern)"/>
 
-  <!-- Subtle grid lines -->
-  <g stroke="#1a4d78" stroke-width="0.5" opacity="0.25">
-    <line x1="0" y1="38" x2="600" y2="38"/>
-    <line x1="0" y1="126" x2="600" y2="126"/>
-    <line x1="120" y1="0" x2="120" y2="160"/>
-    <line x1="260" y1="0" x2="260" y2="160"/>
+  <!-- Decorative circles -->
+  <circle cx="150" cy="100" r="80" fill="none" stroke="#1a5a8a" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="150" cy="100" r="120" fill="none" stroke="#1a5a8a" stroke-width="0.5" opacity="0.2"/>
+  <circle cx="650" cy="500" r="100" fill="none" stroke="#1a5a8a" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="650" cy="500" r="140" fill="none" stroke="#1a5a8a" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- ===== NETWORK NODES AND CONNECTIONS ===== -->
+  <g filter="url(#glow)">
+    <!-- Connection lines -->
+    <line x1="120" y1="180" x2="250" y2="120" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.6"/>
+    <line x1="120" y1="180" x2="180" y2="300" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="120" y1="180" x2="80" y2="280" stroke="url(#netGrad2)" stroke-width="1" opacity="0.4"/>
+    <line x1="250" y1="120" x2="350" y2="200" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.6"/>
+    <line x1="250" y1="120" x2="300" y2="80" stroke="url(#netGrad2)" stroke-width="1" opacity="0.4"/>
+    <line x1="180" y1="300" x2="350" y2="200" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="180" y1="300" x2="120" y2="400" stroke="url(#netGrad2)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="350" y1="200" x2="450" y2="150" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.6"/>
+    <line x1="350" y1="200" x2="400" y2="320" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="120" y1="400" x2="280" y2="420" stroke="url(#netGrad2)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="280" y1="420" x2="400" y2="320" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="450" y1="150" x2="550" y2="100" stroke="url(#netGrad2)" stroke-width="1" opacity="0.4"/>
+    <line x1="450" y1="150" x2="600" y2="220" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="400" y1="320" x2="550" y2="350" stroke="url(#netGrad2)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="600" y1="220" x2="550" y2="350" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="550" y1="100" x2="700" y2="150" stroke="url(#netGrad2)" stroke-width="1" opacity="0.4"/>
+    <line x1="600" y1="220" x2="720" y2="280" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="550" y1="350" x2="680" y2="400" stroke="url(#netGrad2)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="700" y1="150" x2="720" y2="280" stroke="url(#netGrad1)" stroke-width="1" opacity="0.4"/>
+
+    <!-- Network nodes -->
+    <circle cx="120" cy="180" r="6" fill="#00d4ff" opacity="0.9"/>
+    <circle cx="250" cy="120" r="5" fill="#4a9eff" opacity="0.9"/>
+    <circle cx="180" cy="300" r="5" fill="#00d4ff" opacity="0.8"/>
+    <circle cx="80" cy="280" r="4" fill="#4a9eff" opacity="0.6"/>
+    <circle cx="300" cy="80" r="4" fill="#4a9eff" opacity="0.6"/>
+    <circle cx="350" cy="200" r="7" fill="#00d4ff" opacity="0.9"/>
+    <circle cx="120" cy="400" r="5" fill="#4a9eff" opacity="0.8"/>
+    <circle cx="450" cy="150" r="5" fill="#00d4ff" opacity="0.8"/>
+    <circle cx="400" cy="320" r="6" fill="#4a9eff" opacity="0.9"/>
+    <circle cx="280" cy="420" r="5" fill="#00d4ff" opacity="0.8"/>
+    <circle cx="550" cy="100" r="4" fill="#4a9eff" opacity="0.7"/>
+    <circle cx="600" cy="220" r="5" fill="#00d4ff" opacity="0.8"/>
+    <circle cx="550" cy="350" r="5" fill="#4a9eff" opacity="0.8"/>
+    <circle cx="700" cy="150" r="4" fill="#00d4ff" opacity="0.7"/>
+    <circle cx="720" cy="280" r="5" fill="#4a9eff" opacity="0.8"/>
+    <circle cx="680" cy="400" r="4" fill="#00d4ff" opacity="0.7"/>
+
+    <!-- Pulsing nodes -->
+    <circle cx="120" cy="180" r="10" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.4">
+      <animate attributeName="r" values="6;14;6" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="200" r="10" fill="none" stroke="#4a9eff" stroke-width="0.5" opacity="0.4">
+      <animate attributeName="r" values="7;16;7" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="220" r="10" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.4">
+      <animate attributeName="r" values="5;13;5" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
-  <!-- Welcome header -->
-  <text x="22" y="24" font-family="monospace" font-size="12" letter-spacing="0.5" fill="#8cf0ff" filter="url(#softGlow)">WELCOME TO CYBERCAFE</text>
-  <text x="22" y="40" font-family="monospace" font-size="13" letter-spacing="0.8" fill="#5fe3ff" filter="url(#softGlow)">Saulos Techspace</text>
+  <!-- ===== FINGERPRINT ===== -->
+  <g transform="translate(560, 80)" filter="url(#softGlow)">
+    <!-- Fingerprint ridges -->
+    <ellipse cx="0" cy="0" rx="45" ry="55" fill="none" stroke="url(#fpGrad)" stroke-width="2" opacity="0.5"/>
+    <ellipse cx="0" cy="0" rx="38" ry="47" fill="none" stroke="url(#fpGrad)" stroke-width="1.8" opacity="0.6"/>
+    <ellipse cx="0" cy="0" rx="31" ry="39" fill="none" stroke="url(#fpGrad)" stroke-width="1.6" opacity="0.7"/>
+    <ellipse cx="0" cy="0" rx="24" ry="31" fill="none" stroke="url(#fpGrad)" stroke-width="1.4" opacity="0.75"/>
+    <ellipse cx="0" cy="0" rx="17" ry="23" fill="none" stroke="url(#fpGrad)" stroke-width="1.2" opacity="0.8"/>
+    <ellipse cx="0" cy="0" rx="10" ry="15" fill="none" stroke="url(#fpGrad)" stroke-width="1" opacity="0.85"/>
+    <ellipse cx="0" cy="0" rx="4" ry="7" fill="none" stroke="url(#fpGrad)" stroke-width="0.8" opacity="0.9"/>
 
-  <!-- Code snippet -->
-  <g class="codeFlicker" font-family="monospace" font-size="8.5" fill="#4a9bd0">
-    <text x="22" y="64">const scan = async () =&gt; {</text>
-    <text x="36" y="77">match: false,</text>
-    <text x="22" y="90">};</text>
-    <text x="22" y="108">0x4F2A  0x9C31  0x77E0</text>
-    <text x="22" y="126">if (match) grantAccess();</text>
-    <text x="22" y="144">confidence: 0.9421</text>
+    <!-- Fingerprint arc lines (top) -->
+    <path d="M-35,-30 Q-20,-45 0,-48 Q20,-45 35,-30" fill="none" stroke="url(#fpGrad)" stroke-width="1.5" opacity="0.5"/>
+    <path d="M-30,-25 Q-15,-38 0,-40 Q15,-38 30,-25" fill="none" stroke="url(#fpGrad)" stroke-width="1.3" opacity="0.6"/>
+    <path d="M-25,-20 Q-12,-31 0,-33 Q12,-31 25,-20" fill="none" stroke="url(#fpGrad)" stroke-width="1.1" opacity="0.7"/>
+
+    <!-- Fingerprint arc lines (bottom) -->
+    <path d="M-35,30 Q-20,45 0,48 Q20,45 35,30" fill="none" stroke="url(#fpGrad)" stroke-width="1.5" opacity="0.5"/>
+    <path d="M-30,25 Q-15,38 0,40 Q15,38 30,25" fill="none" stroke="url(#fpGrad)" stroke-width="1.3" opacity="0.6"/>
+    <path d="M-25,20 Q-12,31 0,33 Q12,31 25,20" fill="none" stroke="url(#fpGrad)" stroke-width="1.1" opacity="0.7"/>
+
+    <!-- Center core -->
+    <ellipse cx="0" cy="0" rx="3" ry="5" fill="#4af0ff" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Label -->
+    <text x="0" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4a9eff" opacity="0.7">FINGERPRINT</text>
+    <text x="0" y="82" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#4a9eff" opacity="0.4">AUTHENTICATION</text>
   </g>
 
-  <!-- Fingerprint scanner area -->
-  <circle class="haloPulse" cx="430" cy="80" r="68" fill="#3ad4ef" opacity="0.15" filter="url(#haloGlow)"/>
+  <!-- ===== CODE BLOCK ===== -->
+  <g transform="translate(60, 430)" filter="url(#glow)">
+    <!-- Code window background -->
+    <rect x="0" y="0" width="400" height="140" rx="6" fill="#0a1a2e" stroke="#1a5a8a" stroke-width="1" opacity="0.85"/>
+    <!-- Window controls -->
+    <circle cx="15" cy="14" r="4" fill="#ff5f56" opacity="0.7"/>
+    <circle cx="29" cy="14" r="4" fill="#ffbd2e" opacity="0.7"/>
+    <circle cx="43" cy="14" r="4" fill="#27c93f" opacity="0.7"/>
 
-  <g transform="translate(430,80)">
-    <!-- Outer rings -->
-    <circle class="ring" r="58" fill="none" stroke="#1f5f8f" stroke-width="0.6"/>
-    <circle class="ring" r="50" fill="none" stroke="#2b7db0" stroke-width="0.9" style="animation-delay:0.6s"/>
-
-    <!-- Corner brackets -->
-    <g filter="url(#softGlow)">
-      <path d="M-45,-45 h10 M-45,-45 v10" stroke="#8cf0ff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-      <path d="M45,-45 h-10 M45,-45 v10" stroke="#8cf0ff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-      <path d="M-45,45 h10 M-45,45 v-10" stroke="#8cf0ff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-      <path d="M45,45 h-10 M45,45 v-10" stroke="#8cf0ff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-    </g>
-
-    <!-- Fingerprint ridges - darker and with extra prints -->
-    <g clip-path="url(#fpClip)" transform="translate(-430,-80)">
-      <g transform="translate(430,80)" fill="none" stroke="url(#fpStrokeDark)" stroke-width="2.5" stroke-linecap="round" filter="url(#softGlow)">
-        <!-- Inner core -->
-        <circle r="5" stroke-dasharray="18 2" stroke-dashoffset="3"/>
-        <circle r="9" stroke-dasharray="12 2 16 2" stroke-dashoffset="6"/>
-        <circle r="13" stroke-dasharray="26 2 10 2" stroke-dashoffset="1"/>
-        <circle r="17" stroke-dasharray="32 3 14 2" stroke-dashoffset="10"/>
-        <circle r="21" stroke-dasharray="38 3 18 2" stroke-dashoffset="4"/>
-        <circle r="25" stroke-dasharray="44 3 22 3" stroke-dashoffset="15"/>
-        <circle r="29" stroke-dasharray="50 3 16 2 12 2" stroke-dashoffset="0"/>
-        <circle r="33" stroke-dasharray="56 3 20 3 14 2" stroke-dashoffset="20"/>
-        <circle r="37" stroke-dasharray="62 3 24 3 18 3" stroke-dashoffset="8"/>
-        <circle r="41" stroke-dasharray="70 3 28 3 22 3" stroke-dashoffset="25"/>
-        <circle r="45" stroke-dasharray="76 4 32 3" stroke-dashoffset="12"/>
-        <circle r="49" stroke-dasharray="82 4 36 3" stroke-dashoffset="30"/>
-      </g>
-      
-      <!-- Extra fingerprint lines - denser/darker details -->
-      <g transform="translate(430,80)" fill="none" stroke="url(#fpStroke)" stroke-width="1.5" stroke-linecap="round" opacity="0.5" class="fp-extra">
-        <circle r="7" stroke-dasharray="8 3 12 2" stroke-dashoffset="2"/>
-        <circle r="15" stroke-dasharray="18 4 14 3" stroke-dashoffset="7"/>
-        <circle r="23" stroke-dasharray="22 3 16 4 10 2" stroke-dashoffset="0"/>
-        <circle r="31" stroke-dasharray="28 4 20 3 14 3" stroke-dashoffset="12"/>
-        <circle r="39" stroke-dasharray="34 3 24 4 18 3" stroke-dashoffset="5"/>
-        <circle r="47" stroke-dasharray="40 4 28 3 20 4" stroke-dashoffset="18"/>
-      </g>
-    </g>
-
-    <!-- Scanning beam -->
-    <g class="scanline">
-      <rect x="-52" y="0" width="104" height="8" fill="url(#beamGrad)"/>
-      <circle r="3" fill="url(#coreGlow)" filter="url(#bigGlow)"/>
-      <rect x="-52" y="2.5" width="104" height="1.2" fill="#e8fdff"/>
-    </g>
+    <!-- Code lines -->
+    <text x="15" y="40" font-family="Consolas, Courier New, monospace" font-size="11" fill="#6aafff" opacity="0.8">
+      <tspan fill="#4a9eff">function</tspan> <tspan fill="#00d4ff">authenticate</tspan>(<tspan fill="#ffbd2e">user</tspan>) {
+    </text>
+    <text x="15" y="58" font-family="Consolas, Courier New, monospace" font-size="11" fill="#6aafff" opacity="0.7">
+      <tspan fill="#27c93f">const</tspan> <tspan fill="#ffbd2e">hash</tspan> = <tspan fill="#4a9eff">createHash</tspan>(<tspan fill="#ff6b6b">"sha256"</tspan>);
+    </text>
+    <text x="15" y="76" font-family="Consolas, Courier New, monospace" font-size="11" fill="#6aafff" opacity="0.7">
+      <tspan fill="#ffbd2e">let</tspan> <tspan fill="#00d4ff">token</tspan> = <tspan fill="#4a9eff">generateToken</tspan>(<tspan fill="#ffbd2e">user</tspan>.<tspan fill="#6aafff">id</tspan>);
+    </text>
+    <text x="15" y="94" font-family="Consolas, Courier New, monospace" font-size="11" fill="#6aafff" opacity="0.7">
+      <tspan fill="#ff6b6b">return</tspan> <tspan fill="#4a9eff">verify</tspan>(<tspan fill="#ffbd2e">hash</tspan>, <tspan fill="#00d4ff">token</tspan>);
+    </text>
+    <text x="15" y="112" font-family="Consolas, Courier New, monospace" font-size="11" fill="#6aafff" opacity="0.6">
+      }
+    </text>
   </g>
 
-  <!-- Status -->
-  <text x="430" y="148" text-anchor="middle" font-family="monospace" font-size="11" letter-spacing="3.5" fill="#5fe3ff" class="pulseWord" filter="url(#softGlow)">SCANNING</text>
-  <g transform="translate(498,145)" fill="#5fe3ff">
-    <circle class="dotBlink" cx="0" cy="0" r="1.6"/>
-    <circle class="dotBlink2" cx="6.5" cy="0" r="1.6"/>
+  <!-- ===== DECORATIVE CODE SNIPPETS ===== -->
+  <g filter="url(#glow)">
+    <text x="500" y="480" font-family="Consolas, Courier New, monospace" font-size="9" fill="#4a9eff" opacity="0.4">
+      <tspan>│ 0x7F3A  │ 0x9B2E  │ 0x4D1F  │</tspan>
+    </text>
+    <text x="500" y="495" font-family="Consolas, Courier New, monospace" font-size="9" fill="#4a9eff" opacity="0.35">
+      <tspan>│ 0xC8A1  │ 0x5E7B  │ 0x2F9C  │</tspan>
+    </text>
+    <text x="500" y="510" font-family="Consolas, Courier New, monospace" font-size="9" fill="#4a9eff" opacity="0.3">
+      <tspan>│ 0x1D4E  │ 0x6A3F  │ 0xB8C2  │</tspan>
+    </text>
   </g>
+
+  <!-- ===== BINARY DATA STREAM ===== -->
+  <g filter="url(#glow)">
+    <text x="620" y="530" font-family="Consolas, Courier New, monospace" font-size="8" fill="#00d4ff" opacity="0.3">
+      <tspan>01001110 01100101 01110100</tspan>
+    </text>
+    <text x="620" y="542" font-family="Consolas, Courier New, monospace" font-size="8" fill="#4a9eff" opacity="0.25">
+      <tspan>01110111 01101111 01110010</tspan>
+    </text>
+    <text x="620" y="554" font-family="Consolas, Courier New, monospace" font-size="8" fill="#00d4ff" opacity="0.2">
+      <tspan>01101011 00100000 01110011</tspan>
+    </text>
+    <text x="620" y="566" font-family="Consolas, Courier New, monospace" font-size="8" fill="#4a9eff" opacity="0.15">
+      <tspan>01100101 01100011 01110101</tspan>
+    </text>
+    <text x="620" y="578" font-family="Consolas, Courier New, monospace" font-size="8" fill="#00d4ff" opacity="0.12">
+      <tspan>01110010 01101001 01110100</tspan>
+    </text>
+  </g>
+
+  <!-- ===== HASH / KEY INDICATOR ===== -->
+  <g transform="translate(130, 80)" filter="url(#softGlow)">
+    <text font-family="Consolas, monospace" font-size="12" fill="#4a9eff" opacity="0.5">
+      <tspan>🔑 0x3F2A·B8E1·D4C9·6F7A</tspan>
+    </text>
+  </g>
+
+  <!-- ===== STATUS INDICATOR ===== -->
+  <g transform="translate(640, 460)">
+    <circle cx="0" cy="0" r="3" fill="#27c93f" opacity="0.8">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="10" y="3" font-family="Consolas, monospace" font-size="9" fill="#4a9eff" opacity="0.5">SECURE CONNECTION</text>
+  </g>
+
+  <!-- ===== LOCK ICON ===== -->
+  <g transform="translate(720, 50)" filter="url(#glow)">
+    <rect x="-8" y="-2" width="16" height="12" rx="2" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.5"/>
+    <path d="M-5,-2 L-5,-6 Q-5,-12 0,-12 Q5,-12 5,-6 L5,-2" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="0" cy="4" r="2" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.4"/>
+    <rect x="-1.5" y="3" width="3" height="3" fill="#4a9eff" opacity="0.3"/>
+  </g>
+
+  <!-- ===== ANGLED ACCENT LINES ===== -->
+  <line x1="0" y1="0" x2="40" y2="0" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
+  <line x1="0" y1="0" x2="0" y2="40" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
+  <line x1="800" y1="0" x2="760" y2="0" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
+  <line x1="800" y1="0" x2="800" y2="40" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
+  <line x1="0" y1="600" x2="40" y2="600" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
+  <line x1="0" y1="600" x2="0" y2="560" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
+  <line x1="800" y1="600" x2="760" y2="600" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
+  <line x1="800" y1="600" x2="800" y2="560" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
+
+  <!-- ===== SUBTLE SCANNING LINE ===== -->
+  <line x1="50" y1="300" x2="750" y2="300" stroke="#00d4ff" stroke-width="0.5" opacity="0.05">
+    <animate attributeName="y1" values="100;500;100" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="100;500;100" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.02;0.08;0.02" dur="8s" repeatCount="indefinite"/>
+  </line>
 </svg>
