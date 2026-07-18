@@ -1,182 +1,234 @@
-<svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, 'Courier New', monospace">
+<svg width="680" height="400" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Welcome, written in code style, with animated network nodes</title>
+  <desc>A black background with the word WELCOME written in a terminal code style using red angle brackets, animated typing terminal lines, and a red and white network of connected nodes on the right side with pulsing nodes and drawing connection lines.</desc>
 
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0e14"/>
-      <stop offset="100%" stop-color="#0d1b2a"/>
-    </linearGradient>
-    <linearGradient id="screenGlow" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00ff9c" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#00ff9c" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E24B4A" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#E24B4A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeGlowWhite" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <clipPath id="frameClip">
-      <rect x="20" y="20" width="860" height="380" rx="14"/>
-    </clipPath>
+    <filter id="shadowFilter">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#E24B4A" flood-opacity="0.3"/>
+    </filter>
   </defs>
 
+  <style>
+    .term { font-family: 'Courier New', monospace; }
+    .line { opacity: 0; animation: typeIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards; }
+    .l1 { animation-delay: 0.2s; }
+    .l2 { animation-delay: 0.9s; }
+    .l3 { animation-delay: 1.6s; }
+    .l4 { animation-delay: 4.4s; }
+    .l5 { animation-delay: 5.1s; }
+    .l6 { animation-delay: 5.8s; }
+    @keyframes typeIn {
+      0% { opacity: 0; transform: translateX(-8px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .title-bracket { opacity: 0; animation: fadeIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+    .tb1 { animation-delay: 2.2s; }
+    .tb2 { animation-delay: 3.4s; }
+    .title-word { opacity: 0; animation: revealWord 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; animation-delay: 2.5s; }
+    @keyframes fadeIn { 0% { opacity: 0; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1); } }
+    @keyframes revealWord {
+      0% { opacity: 0; transform: scale(0.8) rotate(-2deg); }
+      60% { opacity: 1; transform: scale(1.05) rotate(0.5deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0); }
+    }
+    .title-word { animation-fill-mode: forwards; transform-box: fill-box; transform-origin: center; }
+    .title-glow {
+      opacity: 0;
+      animation: glowPulse 3s ease-in-out infinite;
+      animation-delay: 3.4s;
+    }
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.08; }
+      50% { opacity: 0.35; }
+    }
+
+    .cursor { animation: blink 1s steps(1) infinite; animation-delay: 6.2s; opacity: 0; }
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .net-line {
+      stroke-dasharray: 220;
+      stroke-dashoffset: 220;
+      animation: drawLine 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    }
+    .net-node {
+      opacity: 0;
+      animation: nodeIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, nodePulse 2.8s ease-in-out infinite;
+    }
+    .net-node-white {
+      opacity: 0;
+      animation: nodeIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, nodePulseWhite 2.8s ease-in-out infinite;
+    }
+    @keyframes drawLine { 0% { stroke-dashoffset: 220; opacity: 0; } 30% { opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 1; } }
+    @keyframes nodeIn { 0% { opacity: 0; transform: scale(0); } 100% { opacity: 1; transform: scale(1); } }
+    @keyframes nodePulse {
+      0%, 100% { transform: scale(1); r: 6; }
+      50% { transform: scale(1.25); r: 7; }
+    }
+    @keyframes nodePulseWhite {
+      0%, 100% { transform: scale(1); r: 7; }
+      50% { transform: scale(1.2); r: 8; }
+    }
+    .net-node, .net-node-white { transform-box: fill-box; transform-origin: center; }
+
+    .ring {
+      opacity: 0;
+      animation: ringPulse 3s ease-out infinite;
+    }
+    @keyframes ringPulse {
+      0% { opacity: 0.6; transform: scale(0.8); r: 14; }
+      100% { opacity: 0; transform: scale(2.2); r: 30; }
+    }
+    .ring { transform-box: fill-box; transform-origin: center; }
+
+    .sub-line {
+      opacity: 0;
+      animation: fadeUp 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .bg-pulse {
+      animation: bgPulse 8s ease-in-out infinite;
+    }
+    @keyframes bgPulse {
+      0%, 100% { opacity: 0.15; }
+      50% { opacity: 0.3; }
+    }
+
+    .grid-line {
+      animation: gridPulse 4s ease-in-out infinite;
+    }
+    @keyframes gridPulse {
+      0%, 100% { opacity: 0.03; }
+      50% { opacity: 0.08; }
+    }
+  </style>
+
   <!-- Background -->
-  <rect width="900" height="420" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="680" height="400" fill="#0A0A0A"/>
 
-  <!-- Outer frame -->
-  <rect x="20" y="20" width="860" height="380" rx="14" fill="#0b1220" stroke="#1f8a70" stroke-width="1.5"/>
-  <rect x="20" y="20" width="860" height="380" rx="14" fill="url(#screenGlow)"/>
-
-  <g clip-path="url(#frameClip)">
-    <!-- Falling matrix-style code columns -->
-    <g font-size="14" fill="#0f5132" opacity="0.55">
-      <text x="40"  y="0" fill="#16a34a">
-        <animate attributeName="y" from="-400" to="420" dur="6s" repeatCount="indefinite"/>
-        10110 fx3a c2:ff 9d0e
-      </text>
-      <text x="95"  y="0" fill="#16a34a">
-        <animate attributeName="y" from="-500" to="420" dur="7.5s" begin="0.5s" repeatCount="indefinite"/>
-        sudo rm -rf /tmp/log
-      </text>
-      <text x="150" y="0" fill="#16a34a">
-        <animate attributeName="y" from="-350" to="420" dur="5.2s" begin="1s" repeatCount="indefinite"/>
-        0xFF 0x1A encrypt()
-      </text>
-      <text x="205" y="0" fill="#16a34a">
-        <animate attributeName="y" from="-450" to="420" dur="8s" begin="0.2s" repeatCount="indefinite"/>
-        SSH:22 TCP SYN ACK
-      </text>
-      <text x="720" y="0" fill="#16a34a">
-        <animate attributeName="y" from="-400" to="420" dur="6.6s" begin="0.8s" repeatCount="indefinite"/>
-        firewall.allow(443)
-      </text>
-      <text x="780" y="0" fill="#16a34a">
-        <animate attributeName="y" from="-500" to="420" dur="7s" begin="1.4s" repeatCount="indefinite"/>
-        hash: 9f8a2b1c
-      </text>
-      <text x="835" y="0" fill="#16a34a">
-        <animate attributeName="y" from="-350" to="420" dur="5.8s" begin="0.3s" repeatCount="indefinite"/>
-        VPN tunnel up
-      </text>
-    </g>
+  <!-- Subtle grid pattern -->
+  <g class="grid-line" stroke="#E24B4A" stroke-width="0.5" opacity="0.04">
+    <line x1="0" y1="50" x2="680" y2="50"/>
+    <line x1="0" y1="100" x2="680" y2="100"/>
+    <line x1="0" y1="150" x2="680" y2="150"/>
+    <line x1="0" y1="200" x2="680" y2="200"/>
+    <line x1="0" y1="250" x2="680" y2="250"/>
+    <line x1="0" y1="300" x2="680" y2="300"/>
+    <line x1="0" y1="350" x2="680" y2="350"/>
+    <line x1="100" y1="0" x2="100" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="400" y1="0" x2="400" y2="400"/>
+    <line x1="500" y1="0" x2="500" y2="400"/>
+    <line x1="600" y1="0" x2="600" y2="400"/>
   </g>
 
-  <!-- Terminal window bar -->
-  <rect x="60" y="60" width="500" height="34" rx="8" fill="#111827"/>
-  <circle cx="80" cy="77" r="6" fill="#ff5f56"/>
-  <circle cx="100" cy="77" r="6" fill="#ffbd2e"/>
-  <circle cx="120" cy="77" r="6" fill="#27c93f"/>
-  <text x="330" y="82" fill="#7dd3fc" font-size="13" text-anchor="middle">user@cybercafe: ~</text>
+  <!-- Background ambient glow -->
+  <circle cx="350" cy="200" r="280" fill="#E24B4A" opacity="0.03" class="bg-pulse"/>
+  <circle cx="540" cy="180" r="200" fill="#E24B4A" opacity="0.04" class="bg-pulse" style="animation-delay:2s"/>
 
-  <!-- Code-style terminal content -->
-  <g font-size="15" fill="#9ca3af">
-    <text x="72" y="120">$ <tspan fill="#7dd3fc">connect</tspan> --host=cybercafe.local</text>
-    <text x="72" y="145" fill="#4ade80">[OK] Secure channel established</text>
+  <!-- Terminal lines -->
+  <g class="term" font-size="15" fill="#E24B4A" opacity="0.55">
+    <text class="line l1" x="20" y="30">&gt; init.sequence()</text>
+    <text class="line l2" x="20" y="50">&gt; connecting_nodes...</text>
+    <text class="line l3" x="20" y="70">&gt; status: ok</text>
+    <text class="line l4" x="20" y="330">&gt; user.access = granted</text>
+    <text class="line l5" x="20" y="350">&gt; session.start()</text>
+    <text class="line l6" x="20" y="370">&gt; return welcome;<tspan class="cursor">_</tspan></text>
   </g>
 
-  <!-- Typing "Welcome to Cybercafe" effect -->
-  <g filter="url(#glow)">
-    <text x="72" y="200" font-size="34" font-weight="bold" fill="#00ff9c">
-      <tspan>&gt;_ </tspan><tspan id="typedText"></tspan>
-    </text>
+  <!-- Main Title -->
+  <g class="term" font-weight="bold" font-size="46" filter="url(#textGlow)">
+    <rect class="title-glow" x="15" y="108" width="330" height="58" rx="4" fill="#E24B4A" opacity="0"/>
+    <text class="title-bracket tb1" x="30" y="150" fill="#F09595" filter="url(#shadowFilter)">&lt;</text>
+    <text class="title-word" x="60" y="150" fill="#FFFFFF" letter-spacing="2">welcome</text>
+    <text class="title-bracket tb2" x="330" y="150" fill="#F09595" filter="url(#shadowFilter)">/&gt;</text>
   </g>
 
-  <!-- Simulated typewriter using clipped reveal -->
-  <clipPath id="typeClip">
-    <rect x="0" y="0" height="50" width="0">
-      <animate attributeName="width" from="0" to="480" dur="2.5s" fill="freeze" begin="0.3s"/>
-    </rect>
-  </clipPath>
-  <g clip-path="url(#typeClip)" filter="url(#glow)">
-    <text x="132" y="200" font-size="34" font-weight="bold" fill="#00ff9c">Welcome to Cybercafe</text>
-  </g>
-  <!-- blinking cursor -->
-  <rect x="132" y="177" width="4" height="26" fill="#00ff9c">
-    <animate attributeName="width" values="4;4" dur="0.1s" begin="0.3s" fill="freeze"/>
-    <animate attributeName="x" values="132;612" dur="2.5s" begin="0.3s" fill="freeze"/>
-    <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite" begin="2.8s"/>
-  </rect>
+  <!-- Decorative underline for title -->
+  <line x1="30" y1="165" x2="355" y2="165" stroke="#E24B4A" stroke-width="1" opacity="0" class="line l3" style="animation-delay:3.8s"/>
 
-  <!-- Subheading line, code style -->
-  <text x="72" y="240" font-size="14" fill="#64748b">
-    // grab a seat, plug in, and browse securely
-  </text>
-
-  <!-- Status readout lines -->
-  <g font-size="13" fill="#64748b">
-    <text x="72" y="275">status: <tspan fill="#4ade80">ONLINE</tspan></text>
-    <text x="72" y="298">encryption: <tspan fill="#4ade80">AES-256</tspan></text>
-    <text x="72" y="321">firewall: <tspan fill="#4ade80">ACTIVE</tspan></text>
-    <text x="72" y="344">threats_blocked: <tspan fill="#facc15">1,204</tspan></text>
+  <!-- Sub-text lines -->
+  <g class="term" font-size="15" fill="#E24B4A" opacity="0.7">
+    <text class="sub-line" x="30" y="195" style="animation-delay:4.2s">$ echo "hello, friend"</text>
+    <text class="sub-line" x="30" y="218" style="animation-delay:4.6s" fill="#8BC34A" opacity="0.8">&gt; hello, friend</text>
+    <text class="sub-line" x="30" y="248" style="animation-delay:5.0s">$ status --network</text>
+    <text class="sub-line" x="30" y="271" style="animation-delay:5.4s" fill="#8BC34A" opacity="0.8">&gt; 6 nodes online</text>
   </g>
 
-  <!-- Progress bar -->
-  <rect x="72" y="365" width="300" height="8" rx="4" fill="#1f2937"/>
-  <rect x="72" y="365" width="0" height="8" rx="4" fill="#00ff9c">
-    <animate attributeName="width" values="0;300;0" dur="4s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- Divider -->
-  <line x1="620" y1="60" x2="620" y2="380" stroke="#1f2937" stroke-width="1"/>
-
-  <!-- ===== Security icons column on right ===== -->
-  <g transform="translate(660,80)">
-
-    <!-- Shield icon -->
-    <g transform="translate(0,0)">
-      <path d="M40 0 L75 12 V45 C75 70 55 85 40 92 C25 85 5 70 5 45 V12 Z"
-            fill="#0b1220" stroke="#22d3ee" stroke-width="2.5"/>
-      <path d="M25 45 L36 56 L58 30" fill="none" stroke="#22d3ee" stroke-width="4"
-            stroke-linecap="round" stroke-linejoin="round">
-        <animate attributeName="stroke-dasharray" values="0,60;60,60" dur="2s" repeatCount="indefinite"/>
-      </path>
-      <animateTransform attributeName="transform" type="scale" values="1;1.06;1"
-                         dur="2.4s" repeatCount="indefinite" additive="sum"/>
-    </g>
-    <text x="40" y="112" font-size="11" fill="#64748b" text-anchor="middle">FIREWALL</text>
-
-    <!-- Padlock icon -->
-    <g transform="translate(0,140)">
-      <rect x="10" y="35" width="55" height="42" rx="6" fill="#0b1220" stroke="#facc15" stroke-width="2.5"/>
-      <path d="M20 35 V22 a17.5 17.5 0 0 1 35 0 V35" fill="none" stroke="#facc15" stroke-width="4"/>
-      <circle cx="37.5" cy="56" r="5" fill="#facc15">
-        <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
-      </circle>
-      <rect x="34.5" y="60" width="6" height="10" fill="#facc15"/>
-    </g>
-    <text x="40" y="252" font-size="11" fill="#64748b" text-anchor="middle">ENCRYPTED</text>
-
-    <!-- Key icon -->
-    <g transform="translate(2,280)">
-      <circle cx="18" cy="18" r="15" fill="#0b1220" stroke="#a78bfa" stroke-width="3"/>
-      <circle cx="18" cy="18" r="6" fill="none" stroke="#a78bfa" stroke-width="2.5"/>
-      <rect x="32" y="15" width="34" height="6" fill="#a78bfa"/>
-      <rect x="55" y="21" width="6" height="10" fill="#a78bfa"/>
-      <rect x="45" y="21" width="6" height="8" fill="#a78bfa"/>
-      <animateTransform attributeName="transform" type="rotate" values="0 18 18;15 18 18;0 18 18"
-                         dur="2.2s" repeatCount="indefinite"/>
-    </g>
-    <text x="40" y="382" font-size="11" fill="#64748b" text-anchor="middle">ACCESS KEY</text>
-
-    <!-- Wifi / signal icon -->
-    <g transform="translate(5,405)">
-      <circle cx="35" cy="40" r="4" fill="#38bdf8"/>
-      <path d="M20 30 a21 21 0 0 1 30 0" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round">
-        <animate attributeName="opacity" values="0.2;1;0.2" dur="1.8s" repeatCount="indefinite"/>
-      </path>
-      <path d="M10 18 a35 35 0 0 1 50 0" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round">
-        <animate attributeName="opacity" values="0.2;1;0.2" dur="1.8s" begin="0.3s" repeatCount="indefinite"/>
-      </path>
-    </g>
-    <text x="40" y="452" font-size="11" fill="#64748b" text-anchor="middle">SECURE WIFI</text>
-
+  <!-- Network connections -->
+  <g stroke="#E24B4A" stroke-width="1.2" opacity="0.7" fill="none">
+    <line class="net-line" x1="470" y1="90"  x2="560" y2="60"  style="animation-delay:0.6s"/>
+    <line class="net-line" x1="470" y1="90"  x2="540" y2="150" style="animation-delay:0.8s"/>
+    <line class="net-line" x1="470" y1="90"  x2="420" y2="180" style="animation-delay:1.0s"/>
+    <line class="net-line" x1="540" y1="150" x2="620" y2="130" style="animation-delay:1.2s"/>
+    <line class="net-line" x1="540" y1="150" x2="580" y2="240" style="animation-delay:1.4s"/>
+    <line class="net-line" x1="420" y1="180" x2="470" y2="270" style="animation-delay:1.6s"/>
+    <line class="net-line" x1="470" y1="270" x2="580" y2="240" style="animation-delay:1.8s"/>
+    <line class="net-line" x1="470" y1="270" x2="440" y2="340" style="animation-delay:2.0s"/>
+    <line class="net-line" x1="580" y1="240" x2="620" y2="310" style="animation-delay:2.2s"/>
+    <line class="net-line" x1="620" y1="130" x2="580" y2="240" style="animation-delay:2.4s"/>
+    <line class="net-line" x1="560" y1="60"  x2="620" y2="130" style="animation-delay:1.0s"/>
+    <line class="net-line" x1="420" y1="180" x2="440" y2="340" style="animation-delay:2.2s"/>
   </g>
 
-  <!-- Bottom footer strip -->
-  <rect x="20" y="372" width="860" height="28" rx="0" fill="#0b1220" opacity="0.001"/>
-  <text x="450" y="392" font-size="11" fill="#334155" text-anchor="middle">
-    session_id: 0xA1B2C3 // stay safe, stay encrypted
-  </text>
+  <!-- Network nodes -->
+  <g>
+    <!-- Pulse rings -->
+    <circle class="ring" cx="470" cy="90"  r="14" fill="none" stroke="#E24B4A" stroke-width="1.5" style="animation-delay:1.0s"/>
+    <circle class="ring" cx="580" cy="240" r="14" fill="none" stroke="#E24B4A" stroke-width="1.5" style="animation-delay:2.2s"/>
+    <circle class="ring" cx="540" cy="150" r="14" fill="none" stroke="#E24B4A" stroke-width="1.5" style="animation-delay:1.6s"/>
 
+    <!-- Node glow backgrounds -->
+    <circle cx="470" cy="90"  r="18" fill="url(#nodeGlow)" opacity="0.4"/>
+    <circle cx="580" cy="240" r="18" fill="url(#nodeGlow)" opacity="0.4"/>
+    <circle cx="540" cy="150" r="16" fill="url(#nodeGlow)" opacity="0.3"/>
+    <circle cx="420" cy="180" r="16" fill="url(#nodeGlow)" opacity="0.3"/>
+    <circle cx="470" cy="270" r="16" fill="url(#nodeGlow)" opacity="0.3"/>
+    <circle cx="620" cy="130" r="14" fill="url(#nodeGlowWhite)" opacity="0.3"/>
+    <circle cx="560" cy="60"  r="14" fill="url(#nodeGlowWhite)" opacity="0.3"/>
+    <circle cx="620" cy="310" r="14" fill="url(#nodeGlow)" opacity="0.25"/>
+    <circle cx="440" cy="340" r="14" fill="url(#nodeGlowWhite)" opacity="0.25"/>
+
+    <!-- Nodes -->
+    <circle class="net-node" cx="470" cy="90"  r="6" fill="#FFFFFF" style="animation-delay:0.3s, 1.0s"/>
+    <circle class="net-node-white" cx="560" cy="60"  r="5" fill="#E24B4A" style="animation-delay:0.5s, 1.2s"/>
+    <circle class="net-node" cx="540" cy="150" r="6" fill="#FFFFFF" style="animation-delay:0.7s, 1.4s"/>
+    <circle class="net-node-white" cx="620" cy="130" r="5" fill="#E24B4A" style="animation-delay:0.9s, 1.6s"/>
+    <circle class="net-node" cx="420" cy="180" r="6" fill="#FFFFFF" style="animation-delay:1.1s, 1.8s"/>
+    <circle class="net-node-white" cx="580" cy="240" r="7" fill="#E24B4A" style="animation-delay:1.3s, 2.0s"/>
+    <circle class="net-node" cx="470" cy="270" r="6" fill="#FFFFFF" style="animation-delay:1.5s, 2.2s"/>
+    <circle class="net-node-white" cx="620" cy="310" r="5" fill="#E24B4A" style="animation-delay:1.7s, 2.4s"/>
+    <circle class="net-node" cx="440" cy="340" r="5" fill="#FFFFFF" style="animation-delay:1.9s, 2.6s"/>
+  </g>
+
+  <!-- Decorative corner accents -->
+  <g stroke="#E24B4A" stroke-width="1.5" opacity="0.15">
+    <polyline points="0,15 15,0"/>
+    <polyline points="665,0 680,15"/>
+    <polyline points="680,385 665,400"/>
+    <polyline points="0,385 15,400"/>
+  </g>
 </svg>
