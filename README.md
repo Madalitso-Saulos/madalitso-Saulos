@@ -1,61 +1,88 @@
 <div align="center">
 
-<img src="download.svg" width="100%" alt="Animated digital fingerprint and network hero banner"/>
+<img src="download.svg" width="100%" alt="Cybersecurity Banner"/>
 
 </div>
 
-<div align="left">
+---
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2600&pause=900&color=00BFFF&center=false&vCenter=true&width=650&height=45&lines=%F0%9F%92%BB+Software+Developer;%F0%9F%8C%90+Network+Engineer;%F0%9F%94%90+Cybersecurity+Student;%F0%9F%9A%80+Open+Source+Contributor;%F0%9F%A7%A9+Problem+Solver" alt="Typing SVG" />
+```console
+┌──(madalitso㉿github)-[~/profile]
+└─$ whoami
 
-> Building secure, scalable, and innovative digital solutions through software engineering, networking, and cybersecurity.
-
-<a href="#-featured-projects">
-  <img src="https://img.shields.io/badge/Explore_Projects-00BFFF?style=for-the-badge&logo=rocket&logoColor=0D1117&labelColor=0D1117" alt="Explore Projects"/>
-</a>
-<a href="https://github.com/madalitso-saulos">
-  <img src="https://img.shields.io/badge/View_GitHub_Profile-0D1117?style=for-the-badge&logo=github&logoColor=00BFFF&labelColor=0D1117&color=161B22" alt="View GitHub Profile"/>
-</a>
-
-</div>
-
-<br/>
-
-<!-- ================= STATS STRIP ================= -->
-<div align="center">
-
-<table>
-<tr>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadalitso-saulos&label=REPOSITORIES&query=%24.public_repos&color=00BFFF&style=for-the-badge&labelColor=0D1117" alt="Repositories"/>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/COMMITS-1.2K%2B-3B82F6?style=for-the-badge&labelColor=0D1117" alt="Commits"/>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/TECHNOLOGIES-20%2B-00BFFF?style=for-the-badge&labelColor=0D1117" alt="Technologies"/>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/CERTIFICATIONS-In_Progress-3B82F6?style=for-the-badge&labelColor=0D1117" alt="Certifications"/>
-</td>
-</tr>
-</table>
-
-</div>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=00BFFF" width="100%"/>
-
-<!-- ================= ABOUT ================= -->
-## `~$` whoami
-
-```bash
-> name         : Madalitso Saulos
-> role         : Software Developer / Network Engineer / Cybersecurity Student
-> focus        : Secure systems, resilient networks, clean code
-> currently    : Studying cybersecurity while shipping full-stack + network tooling
-> status       : Open to collaboration on open-source security & dev projects
+Madalitso Saulos
 ```
 
-<br/>
-<sub> Securing systems, one commit at a time.</sub>
+```console
+┌──(madalitso㉿github)-[~/profile]
+└─$ cat profile.info
+
+Role      : Software Developer
+Specialty : Network Engineering
+Focus      : Cybersecurity & Digital Forensics
+Education  : BSc Computer Systems & Security
+Status     : Open Source Contributor
+Location   : Malawi
+```
+
+> **Building secure systems, resilient networks, and modern software through engineering, networking, and cybersecurity.**
+
+<p align="left">
+
+<a href="#-featured-projects">
+<img src="https://img.shields.io/badge/Explore_Projects-00BFFF?style=for-the-badge&labelColor=0D1117&color=161B22" />
+</a>
+
+<a href="https://github.com/madalitso-saulos">
+<img src="https://img.shields.io/badge/GitHub_Profile-0D1117?style=for-the-badge&logo=github&logoColor=00BFFF" />
+</a>
+
+</p>
+
+---
+
+<div align="center">
+
+| Repositories | Technologies | Focus | Availability |
+|:------------:|:------------:|:-----:|:------------:|
+| Public Projects | 20+ Technologies | Secure Development | Open to Collaboration |
+
 </div>
+
+---
+
+## `~/about`
+
+```bash
+madalitso@github:~$ neofetch
+
+OS           : Linux
+Shell        : bash
+Editor       : VS Code
+Languages    : Python • JavaScript • HTML • CSS • SQL
+Networking   : Cisco • Routing • Switching • Network Security
+Cybersecurity: Digital Forensics • Blue Team • Security Analysis
+Learning     : Ethical Hacking • Cloud Security • DevSecOps
+```
+
+---
+
+## `~/mission`
+
+```bash
+madalitso@github:~$ echo $MISSION
+
+Design secure software.
+Build resilient networks.
+Learn continuously.
+Contribute to open source.
+```
+
+---
+
+```bash
+madalitso@github:~$ uptime
+
+Learning every day...
+Securing systems one commit at a time.
+```
