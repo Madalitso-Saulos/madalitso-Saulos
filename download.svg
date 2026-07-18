@@ -148,14 +148,14 @@ Thanks for visiting here :)
 <animate attributeName="opacity" values="0;0.5;0" dur="5s" repeatCount="indefinite"/>
 </rect>
 
-<rect x="0" y="0" width="800" height="260" fill="transparent" stroke="#1d3a4a" stroke-width="1" rx="12"/>
+<!-- <rect x="0" y="0" width="800" height="260" fill="transparent" stroke="#1d3a4a" stroke-width="1" rx="12"/>
   <g font-family="'Courier New', monospace" font-size="10" letter-spacing="1" fill="#3ab0ff">
 <text x="36" y="145">LOADING</text>
 <text x="150" y="145" text-anchor="end">
 <animate attributeName="opacity" values="1" dur="0.01s" fill="freeze"/>
 0%
 <animate attributeName="opacity" values="0.7;1;0.7" dur="1.4s" repeatCount="indefinite"/>
-</text>
+</text> -->
 </g>
 </g>
 </svg>
