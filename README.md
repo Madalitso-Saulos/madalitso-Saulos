@@ -1,63 +1,21 @@
-<div align="center">
-
-<img src="cybercafe-scanning-banner.svg" width="100%" alt="Animated digital fingerprint and network hero banner"/>
-
-</div>
-
-<div align="left">
-
-# Madalitso Saulos
-
-
-> Building secure, scalable, and innovative digital solutions through software engineering, networking, and cybersecurity.
-
-<a href="#-featured-projects">
-  <img src="https://img.shields.io/badge/Explore_Projects-00BFFF?style=for-the-badge&logo=rocket&logoColor=0D1117&labelColor=0D1117" alt="Explore Projects"/>
-</a>
-<a href="https://github.com/madalitso-saulos">
-  <img src="https://img.shields.io/badge/View_GitHub_Profile-0D1117?style=for-the-badge&logo=github&logoColor=00BFFF&labelColor=0D1117&color=161B22" alt="View GitHub Profile"/>
-</a>
-
-</div>
-
-<br/>
-
-<!-- ================= STATS STRIP ================= -->
-<div align="center">
-
-<table>
-<tr>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadalitso-saulos&label=REPOSITORIES&query=%24.public_repos&color=00BFFF&style=for-the-badge&labelColor=0D1117" alt="Repositories"/>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/COMMITS-1.2K%2B-3B82F6?style=for-the-badge&labelColor=0D1117" alt="Commits"/>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/TECHNOLOGIES-20%2B-00BFFF?style=for-the-badge&labelColor=0D1117" alt="Technologies"/>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/CERTIFICATIONS-In_Progress-3B82F6?style=for-the-badge&labelColor=0D1117" alt="Certifications"/>
-</td>
-</tr>
-</table>
-
-</div>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=00BFFF" width="100%"/>
-
-<!-- ================= ABOUT ================= -->
-## `~$` whoami
-
-```bash
-> name         : Madalitso Saulos
-> role         : Software Developer / Network Engineer / Cybersecurity Student
-> focus        : Secure systems, resilient networks, clean code
-> currently    : Studying cybersecurity while shipping full-stack + network tooling
-> status       : Open to hiring or collaboration on open-source security & dev projects
-```
-
-<br/>
-<sub> Securing systems, one commit at a time.</sub>
-</div>
-
+<svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="300" fill="#0a0f1c"/>
+  <g id="fingerprint">
+    <circle cx="400" cy="150" r="100" stroke="#00ffff" stroke-width="2" fill="none">
+      <animate attributeName="stroke-width" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M400,50 Q420,150 400,250 Q380,150 400,50" stroke="#00ffff" stroke-width="2" fill="none">
+      <animate attributeName="stroke" values="#00ffff;#00ccff;#00ffff" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <text x="50" y="40" fill="#00ffff" font-size="16">&lt;code&gt; ACCESS: GRANTED</text>
+  <text x="600" y="40" fill="#00ffff" font-size="14">DATA ENCRYPTION</text>
+  <text x="600" y="60" fill="#00ffff" font-size="12">01011001 10101100</text>
+  <rect x="350" y="140" width="100" height="10" fill="#00ffff">
+    <animate attributeName="y" values="140;160;140" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="700" cy="250" r="20" stroke="#ff0000" stroke-width="2" fill="none">
+    <animate attributeName="stroke-width" values="2;5;2" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="650" y="280" fill="#00ffff" font-size="14">SCANNING...</text>
+</svg>
