@@ -66,7 +66,7 @@
 <line x1="650" y1="210" x2="750" y2="60"><animate attributeName="opacity" values="0.15;0.45;0.15" dur="2.2s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" repeatCount="indefinite"/></line>
 </g>
 
-<g fill="#6F4E37" filter="url(#nodeGlow)">
+<g fill="#00ff99" filter="url(#nodeGlow)">
 <circle cx="380" cy="100" r="4"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/></circle>
 <circle cx="450" cy="180" r="4"><animate attributeName="cx" values="450;459;450" dur="4.5s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><animate attributeName="r" values="1.8;2.6;1.8" dur="2.3s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/></circle>
 <circle cx="500" cy="100" r="4"><animate attributeName="cy" values="45;53;45" dur="6s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><animate attributeName="r" values="2.1;3;2.1" dur="1.9s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/></circle>
