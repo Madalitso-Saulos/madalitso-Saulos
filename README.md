@@ -10,15 +10,6 @@
 
 > Building secure, scalable, and innovative digital solutions through software engineering, networking, and cybersecurity.
 
-<a href="#-featured-projects">
-  <img src="https://img.shields.io/badge/Explore_Projects-00BFFF?style=for-the-badge&logo=rocket&logoColor=0D1117&labelColor=0D1117" alt="Explore Projects"/>
-</a>
-<a href="https://github.com/madalitso-saulos">
-  <img src="https://img.shields.io/badge/View_GitHub_Profile-0D1117?style=for-the-badge&logo=github&logoColor=00BFFF&labelColor=0D1117&color=161B22" alt="View GitHub Profile"/>
-</a>
-
-</div>
-
 
 <!-- ================= ABOUT ================= -->
 ## `~$` whoami
