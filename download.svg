@@ -1,134 +1,91 @@
-<div style="position:relative;width:100%;height:260px;background:#000;overflow:hidden;border-radius:12px;font-family:'Courier New',monospace;">
-<canvas id="netCanvas" style="position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
-<div style="position:absolute;top:0;left:0;width:46%;height:100%;overflow:hidden;pointer-events:none;display:flex;flex-direction:column;justify-content:center;">
-<div id="codeCol" style="font-size:11px;line-height:1.7;white-space:pre;padding-left:20px;"></div>
-</div>
-<div style="position:relative;z-index:5;display:flex;flex-direction:column;justify-content:center;height:100%;padding-left:36px;max-width:220px;">
-<div style="width:150px;">
-<div style="display:flex;justify-content:space-between;font-size:10px;color:#3ab0ff;margin-bottom:5px;letter-spacing:1px;">
-<span>LOADING</span><span id="pct">0%</span>
-</div>
-<div style="width:100%;height:4px;background:#111;border:1px solid #1d3a4a;border-radius:2px;overflow:hidden;">
-<div id="loadBar" style="height:100%;width:0%;background:linear-gradient(90deg,#b5342c,#3ab0ff);box-shadow:0 0 6px rgba(58,176,255,0.8);"></div>
-</div>
-</div>
-</div>
-</div>
-<script>
-(function(){
-var canvas = document.getElementById('netCanvas');
-function resize(){
-  var rect = canvas.parentElement.getBoundingClientRect();
-  canvas.width = rect.width;
-  canvas.height = rect.height;
-}
-resize();
-var ctx = canvas.getContext('2d');
-var W, H;
-function setDims(){ W = canvas.width; H = canvas.height; }
-setDims();
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="260" viewBox="0 0 800 260" style="background:#000;border-radius:12px;font-family:'Courier New',monospace;">
+  <defs>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#b5342c"/>
+      <stop offset="100%" style="stop-color:#3ab0ff"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#3ab0ff" flood-opacity="0.8"/>
+    </filter>
+  </defs>
 
-var nodeCount = 42;
-var nodes = [];
-for (var i=0;i<nodeCount;i++){
-  nodes.push({
-    x: W*0.42 + Math.random()*W*0.58,
-    y: Math.random()*H,
-    vx: (Math.random()-0.5)*0.32,
-    vy: (Math.random()-0.5)*0.32,
-    r: 1.4 + Math.random()*1.6
-  });
-}
+  <!-- Network lines -->
+  <g stroke="#3ab0ff" stroke-width="0.6" opacity="0.35">
+    <line x1="380" y1="30" x2="450" y2="80"/>
+    <line x1="380" y1="30" x2="500" y2="45"/>
+    <line x1="380" y1="30" x2="420" y2="120"/>
+    <line x1="450" y1="80" x2="500" y2="45"/>
+    <line x1="450" y1="80" x2="550" y2="150"/>
+    <line x1="450" y1="80" x2="420" y2="120"/>
+    <line x1="500" y1="45" x2="620" y2="90"/>
+    <line x1="500" y1="45" x2="550" y2="150"/>
+    <line x1="420" y1="120" x2="550" y2="150"/>
+    <line x1="420" y1="120" x2="380" y2="180"/>
+    <line x1="550" y1="150" x2="620" y2="90"/>
+    <line x1="550" y1="150" x2="700" y2="140"/>
+    <line x1="620" y1="90" x2="700" y2="140"/>
+    <line x1="620" y1="90" x2="750" y2="60"/>
+    <line x1="380" y1="180" x2="450" y2="220"/>
+    <line x1="380" y1="180" x2="550" y2="200"/>
+    <line x1="450" y1="220" x2="550" y2="200"/>
+    <line x1="700" y1="140" x2="750" y2="60"/>
+    <line x1="700" y1="140" x2="650" y2="210"/>
+    <line x1="550" y1="200" x2="650" y2="210"/>
+    <line x1="650" y1="210" x2="750" y2="60"/>
+  </g>
 
-function step(){
-  ctx.clearRect(0,0,W,H);
-  for (var i=0;i<nodes.length;i++){
-    var n = nodes[i];
-    n.x += n.vx; n.y += n.vy;
-    if (n.x<W*0.38||n.x>W) n.vx*=-1;
-    if (n.y<0||n.y>H) n.vy*=-1;
-  }
-  for (var i=0;i<nodes.length;i++){
-    for (var j=i+1;j<nodes.length;j++){
-      var a=nodes[i], b=nodes[j];
-      var dx=a.x-b.x, dy=a.y-b.y;
-      var dist=Math.sqrt(dx*dx+dy*dy);
-      if (dist<95){
-        ctx.strokeStyle = 'rgba(58,176,255,' + (0.35*(1-dist/95)) + ')';
-        ctx.lineWidth = 0.6;
-        ctx.beginPath();
-        ctx.moveTo(a.x,a.y);
-        ctx.lineTo(b.x,b.y);
-        ctx.stroke();
-      }
-    }
-  }
-  for (var i=0;i<nodes.length;i++){
-    var n = nodes[i];
-    ctx.beginPath();
-    ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
-    ctx.fillStyle = '#3ab0ff';
-    ctx.shadowColor = '#3ab0ff';
-    ctx.shadowBlur = 7;
-    ctx.fill();
-    ctx.shadowBlur = 0;
-  }
-  requestAnimationFrame(step);
-}
-step();
+  <!-- Network nodes -->
+  <g fill="#3ab0ff" filter="url(#shadow)">
+    <circle cx="380" cy="30" r="2.5"/>
+    <circle cx="450" cy="80" r="1.8"/>
+    <circle cx="500" cy="45" r="2.2"/>
+    <circle cx="420" cy="120" r="1.5"/>
+    <circle cx="550" cy="150" r="2.8"/>
+    <circle cx="620" cy="90" r="1.9"/>
+    <circle cx="380" cy="180" r="2.1"/>
+    <circle cx="700" cy="140" r="2.3"/>
+    <circle cx="750" cy="60" r="1.6"/>
+    <circle cx="450" cy="220" r="2.0"/>
+    <circle cx="550" cy="200" r="2.7"/>
+    <circle cx="650" cy="210" r="1.8"/>
+  </g>
 
-window.addEventListener('resize', function(){ resize(); setDims(); });
+  <!-- Left panel - terminal text -->
+  <foreignObject x="0" y="0" width="368" height="260">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding-left:20px;font-size:11px;line-height:1.7;white-space:pre;font-family:'Courier New',monospace;color:#e8e8e8;">
+      <div style="color:#b5342c;opacity:0.6;">root@cybercafe:~$ ssh admin@10.0.0.1</div>
+      <div style="color:#e8e8e8;opacity:0.9;">Connecting to node 0x4F2A...</div>
+      <div style="color:#e8e8e8;opacity:0.4;">PING 192.168.1.1 56(84) bytes</div>
+      <div style="color:#e8e8e8;opacity:0.8;">[ OK ] Started network daemon</div>
+      <div style="color:#b5342c;opacity:0.7;">sudo systemctl status firewall</div>
+      <div style="color:#e8e8e8;opacity:0.5;">drwxr-xr-x 3 root root 4096</div>
+      <div style="color:#e8e8e8;opacity:0.9;">PID 8821 TTY pts/2 CPU 0.3%</div>
+      <div style="color:#e8e8e8;opacity:0.6;">Mounting /dev/sda1 on /mnt</div>
+      <div style="color:#b5342c;opacity:0.8;">kernel: eth0 link up 1Gbps</div>
+      <div style="color:#e8e8e8;opacity:0.4;">> decrypting packet 0x9B1C</div>
+      <div style="color:#e8e8e8;opacity:0.7;">auth: token accepted [200]</div>
+    </div>
+  </foreignObject>
 
-var col = document.getElementById('codeCol');
-var lines = [];
-var lineCount = 11;
-var linuxSnippets = [
-  'root@cybercafe:~$ ssh admin@10.0.0.1',
-  'Connecting to node 0x4F2A...',
-  'PING 192.168.1.1 56(84) bytes',
-  '[ OK ] Started network daemon',
-  'sudo systemctl status firewall',
-  'drwxr-xr-x 3 root root 4096',
-  'PID 8821 TTY pts/2 CPU 0.3%',
-  'Mounting /dev/sda1 on /mnt',
-  'kernel: eth0 link up 1Gbps',
-  '> decrypting packet 0x9B1C',
-  'auth: token accepted [200]',
-  'proc: memory usage 62%',
-  '$ nmap -sV 172.16.0.0/24',
-  'Booting kernel 6.2.0-cyber'
-];
-function pickLine(){
-  return linuxSnippets[Math.floor(Math.random()*linuxSnippets.length)];
-}
-for (var i=0;i<lineCount;i++){
-  var div = document.createElement('div');
-  var isRed = Math.random() > 0.6;
-  div.style.color = isRed ? '#b5342c' : '#e8e8e8';
-  div.style.opacity = (0.4 + Math.random()*0.5).toFixed(2);
-  div.style.overflow = 'hidden';
-  div.style.textOverflow = 'ellipsis';
-  div.style.maxWidth = '95%';
-  div.textContent = pickLine();
-  col.appendChild(div);
-  lines.push(div);
-}
-setInterval(function(){
-  var idx = Math.floor(Math.random()*lines.length);
-  var el = lines[idx];
-  var isRed = Math.random() > 0.6;
-  el.style.color = isRed ? '#b5342c' : '#e8e8e8';
-  el.textContent = pickLine();
-}, 500);
-
-var pct = 0;
-var bar = document.getElementById('loadBar');
-var pctLabel = document.getElementById('pct');
-var loadTimer = setInterval(function(){
-  pct += Math.random()*7;
-  if (pct >= 100){ pct = 100; clearInterval(loadTimer); }
-  bar.style.width = pct + '%';
-  pctLabel.textContent = Math.floor(pct) + '%';
-}, 220);
-})();
-</script>
+  <!-- Right panel - loading -->
+  <g transform="translate(36,0)">
+    <foreignObject x="0" y="80" width="150" height="100">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;">
+        <div style="display:flex;justify-content:space-between;font-size:10px;color:#3ab0ff;margin-bottom:5px;letter-spacing:1px;">
+          <span>LOADING</span>
+          <span>67%</span>
+        </div>
+        <div style="width:100%;height:4px;background:#111;border:1px solid #1d3a4a;border-radius:2px;overflow:hidden;">
+          <div style="height:100%;width:67%;background:linear-gradient(90deg,#b5342c,#3ab0ff);box-shadow:0 0 6px rgba(58,176,255,0.8);"></div>
+        </div>
+      </div>
+    </foreignObject>
+  </g>
+</svg>
