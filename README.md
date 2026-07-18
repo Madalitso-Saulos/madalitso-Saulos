@@ -81,13 +81,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=3B82F6" width="100%"/>
 
-<!-- ================= GITHUB STATS ================= -->
-## `~$` github analytics
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=madalitso-saulos&show_icons=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=00BFFF&icon_color=3B82F6&text_color=c9d1d9&ring_color=00BFFF" alt="GitHub Stats"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=madalitso-saulos&layout=compact&hide_border=true&bg_color=0D1117&title_color=00BFFF&text_color=c9d1d9&langs_count=8" alt="Top Languages"/>
 
 <br/><br/>
 
@@ -108,18 +101,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=3B82F6" width="100%"/>
 
-<!-- ================= WORKSPACE ================= -->
-## `~$` active workspace
 
-```bash
-$ git clone https://github.com/madalitso-saulos/project.git
-$ git commit -m "feat: harden authentication flow"
-$ git push origin main
-$ ssh-keygen -t ed25519 -C "secure-access"
-$ nmap -sV -T4 target.local
-$ sudo systemctl status network-sentinel
-$ python3 recon.py --target 10.0.0.0/24 --verbose
-```
 
 <br/>
 
