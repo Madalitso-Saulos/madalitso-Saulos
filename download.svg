@@ -148,5 +148,4 @@ Thanks for visiting here :)
 <animate attributeName="opacity" values="0;0.5;0" dur="5s" repeatCount="indefinite"/>
 </rect>
 </g>
-</g>
 </svg>
