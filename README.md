@@ -81,11 +81,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=3B82F6" width="100%"/>
 
-
-<br/><br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=madalitso-saulos&hide_border=true&background=0D1117&stroke=00BFFF&ring=00BFFF&fire=3B82F6&currStreakLabel=00BFFF&sideLabels=c9d1d9&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=6e7681" alt="GitHub Streak"/>
-
 <br/><br/>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=madalitso-saulos&bg_color=0D1117&color=00BFFF&line=3B82F6&point=ffffff&area=true&hide_border=true" width="100%" alt="Contribution Graph"/>
@@ -101,11 +96,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=3B82F6" width="100%"/>
 
-
-
-<br/>
-
 <sub> Securing systems, one commit at a time.</sub>
-
 </div>
 
