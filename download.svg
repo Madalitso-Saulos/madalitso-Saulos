@@ -1,136 +1,105 @@
-<svg width="1200" height="640" viewBox="0 0 1200 640"
+<svg width="1200" height="500" viewBox="0 0 1200 500"
      xmlns="http://www.w3.org/2000/svg">
 
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#040711"/>
-      <stop offset="55%" stop-color="#0a1628"/>
-      <stop offset="100%" stop-color="#0d1f2f"/>
+      <stop offset="0%" stop-color="#0d0908"/>
+      <stop offset="55%" stop-color="#181110"/>
+      <stop offset="100%" stop-color="#0d0908"/>
     </linearGradient>
 
-    <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00d4ff"/>
-      <stop offset="50%" stop-color="#00ffb0"/>
-      <stop offset="100%" stop-color="#00d4ff"/>
-    </linearGradient>
-
-    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#7fe9ff"/>
+    <linearGradient id="coffeeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8a5a34"/>
+      <stop offset="100%" stop-color="#c9975f"/>
     </linearGradient>
 
     <linearGradient id="panelFade" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
-    </linearGradient>
-
-    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00ffcf"/>
-      <stop offset="100%" stop-color="#0091ff"/>
+      <stop offset="0%" stop-color="#6f4e37" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#6f4e37" stop-opacity="0"/>
     </linearGradient>
 
     <linearGradient id="footerFade" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.08"/>
+      <stop offset="0%" stop-color="#6f4e37" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#6f4e37" stop-opacity="0.12"/>
     </linearGradient>
 
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
     <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="1.4"/>
-    </filter>
-
-    <filter id="strongGlow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feGaussianBlur stdDeviation="1.2"/>
     </filter>
   </defs>
 
   <!-- Background -->
   <rect width="100%" height="100%" fill="url(#bg)"/>
 
-  <!-- Fine grid -->
-  <g opacity="0.05">
-    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M0 320 H1200 M0 400 H1200 M0 480 H1200 M0 560 H1200" stroke="#00ffff"/>
-    <path d="M100 0 V640 M200 0 V640 M300 0 V640 M400 0 V640
-             M500 0 V640 M600 0 V640 M700 0 V640 M800 0 V640
-             M900 0 V640 M1000 0 V640 M1100 0 V640" stroke="#00ffff"/>
+  <!-- Fine grid, very subtle -->
+  <g opacity="0.04">
+    <path d="M0 100 H1200 M0 200 H1200 M0 300 H1200 M0 400 H1200" stroke="#c9975f"/>
+    <path d="M150 0 V500 M300 0 V500 M450 0 V500 M600 0 V500
+             M750 0 V500 M900 0 V500 M1050 0 V500" stroke="#c9975f"/>
   </g>
 
-  <!-- Outer frame for a polished, contained look -->
-  <rect x="6" y="6" width="1188" height="628" rx="10"
-        fill="none" stroke="#00d4ff" stroke-opacity="0.25" stroke-width="1.5"/>
+  <!-- Outer frame -->
+  <rect x="6" y="6" width="1188" height="488" rx="10"
+        fill="none" stroke="#8a5a34" stroke-opacity="0.35" stroke-width="1.5"/>
 
   <!-- ============ LEFT: BRAND PANEL ============ -->
   <g>
-    <rect x="0" y="0" width="390" height="640" fill="url(#panelFade)"/>
-    <line x1="390" y1="20" x2="390" y2="620" stroke="#00d4ff" stroke-opacity="0.3" stroke-width="1"/>
+    <rect x="0" y="0" width="390" height="500" fill="url(#panelFade)"/>
+    <line x1="390" y1="20" x2="390" y2="480" stroke="#8a5a34" stroke-opacity="0.4" stroke-width="1"/>
 
     <!-- Mark -->
-    <g transform="translate(48,58)" filter="url(#glow)">
+    <g transform="translate(48,52)">
       <polygon points="16,0 32,9 32,27 16,36 0,27 0,9"
-               fill="none" stroke="#00ffcf" stroke-width="2"/>
-      <circle cx="16" cy="18" r="4" fill="#00ffcf"/>
+               fill="none" stroke="#c9975f" stroke-width="2"/>
+      <circle cx="16" cy="18" r="4" fill="#c9975f"/>
     </g>
 
-    <text x="94" y="72" fill="#7fe9ff" font-size="13" letter-spacing="4"
+    <text x="94" y="66" fill="#c9975f" font-size="13" letter-spacing="4"
           font-family="Consolas, 'Courier New', monospace">SAULOS TECH</text>
 
-    <text x="48" y="150" fill="url(#brandGradient)" font-size="40" font-weight="700"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif" filter="url(#softGlow)">
+    <text x="48" y="140" fill="#ffffff" font-size="38" font-weight="700"
+          font-family="'Segoe UI', Helvetica, Arial, sans-serif">
       WELCOME TO
     </text>
-    <text x="48" y="196" fill="url(#brandGradient)" font-size="40" font-weight="700"
-          font-family="'Segoe UI', Helvetica, Arial, sans-serif" filter="url(#softGlow)">
+    <text x="48" y="184" fill="#ffffff" font-size="38" font-weight="700"
+          font-family="'Segoe UI', Helvetica, Arial, sans-serif">
       CYBERCAFE
     </text>
 
-    <rect x="49" y="214" width="64" height="3" fill="#00ffb0"/>
+    <rect x="49" y="202" width="64" height="3" fill="#c9975f"/>
 
-    <text x="48" y="248" fill="#9db4c0" font-size="14"
+    <text x="48" y="234" fill="#cabcaf" font-size="14"
           font-family="'Segoe UI', Helvetica, Arial, sans-serif">
       High-speed internet &#183; Printing &#183; IT support
     </text>
 
-    <!-- ===== Cybersecurity shield badge ===== -->
-    <g transform="translate(48,290)">
-      <g filter="url(#strongGlow)">
-        <path d="M40 0 L78 14 V52 C78 84 58 104 40 114 C22 104 2 84 2 52 V14 Z"
-              fill="none" stroke="url(#shieldGrad)" stroke-width="2.5"/>
-      </g>
-      <path d="M40 0 L78 14 V52 C78 84 58 104 40 114 C22 104 2 84 2 52 V14 Z"
-            fill="#00d4ff" fill-opacity="0.06"/>
-      <!-- lock -->
-      <rect x="24" y="48" width="32" height="24" rx="3" fill="none" stroke="#00ffcf" stroke-width="2"/>
-      <path d="M30 48 V38 a10 10 0 0 1 20 0 V48" fill="none" stroke="#00ffcf" stroke-width="2"/>
-      <circle cx="40" cy="60" r="3" fill="#00ffcf">
-        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+    <!-- Secure Access badge -->
+    <g transform="translate(48,268)">
+      <path d="M40 0 L74 12 V46 C74 74 56 92 40 100 C24 92 6 74 6 46 V12 Z"
+            fill="none" stroke="#c9975f" stroke-width="2"/>
+      <path d="M40 0 L74 12 V46 C74 74 56 92 40 100 C24 92 6 74 6 46 V12 Z"
+            fill="#c9975f" fill-opacity="0.06"/>
+      <rect x="24" y="42" width="32" height="22" rx="3" fill="none" stroke="#ffffff" stroke-width="2"/>
+      <path d="M30 42 V33 a10 10 0 0 1 20 0 V42" fill="none" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="40" cy="53" r="2.6" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2.6s" repeatCount="indefinite"/>
       </circle>
 
-      <text x="98" y="20" fill="#e6f6fb" font-size="13" font-weight="600"
+      <text x="94" y="18" fill="#ffffff" font-size="13" font-weight="600"
             font-family="'Segoe UI', Helvetica, Arial, sans-serif">SECURE ACCESS</text>
-      <text x="98" y="42" fill="#00ff95" font-size="12"
+      <text x="94" y="40" fill="#c9975f" font-size="12"
             font-family="Consolas, 'Courier New', monospace">firewall: enabled</text>
-      <text x="98" y="62" fill="#00ff95" font-size="12"
+      <text x="94" y="60" fill="#c9975f" font-size="12"
             font-family="Consolas, 'Courier New', monospace">encryption: AES-256</text>
-      <text x="98" y="82" fill="#00ff95" font-size="12"
+      <text x="94" y="80" fill="#c9975f" font-size="12"
             font-family="Consolas, 'Courier New', monospace">
         threat_scan: clear
-        <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/>
       </text>
     </g>
 
-    <text x="48" y="576" fill="#4fe3d1" font-size="12" letter-spacing="2"
-          font-family="Consolas, 'Courier New', monospace" opacity="0.85">
+    <text x="48" y="452" fill="#8a5a34" font-size="12" letter-spacing="2"
+          font-family="Consolas, 'Courier New', monospace">
       POWERED BY SAULOS TECH
     </text>
   </g>
@@ -138,98 +107,80 @@
   <!-- ============ CENTER: TERMINAL / CODE ============ -->
   <g transform="translate(430,0)">
 
-    <text x="0" y="46" fill="#00e5ff" font-size="15" letter-spacing="3"
-          font-family="Consolas, 'Courier New', monospace" filter="url(#glow)">
+    <text x="0" y="44" fill="#ffffff" font-size="14" letter-spacing="3"
+          font-family="Consolas, 'Courier New', monospace">
       SYSTEM INITIALIZATION
     </text>
 
     <!-- Terminal window -->
-    <rect x="0" y="62" width="360" height="150" rx="8"
-          fill="#061019" stroke="#00d4ff" stroke-opacity="0.35" stroke-width="1"/>
-    <circle cx="16" cy="78" r="4" fill="#ff5f56"/>
-    <circle cx="30" cy="78" r="4" fill="#ffbd2e"/>
-    <circle cx="44" cy="78" r="4" fill="#27c93f"/>
+    <rect x="0" y="58" width="360" height="140" rx="8"
+          fill="#151010" stroke="#8a5a34" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="16" cy="74" r="4" fill="#c9975f"/>
+    <circle cx="30" cy="74" r="4" fill="#8a5a34"/>
+    <circle cx="44" cy="74" r="4" fill="#ffffff" fill-opacity="0.5"/>
 
-    <g fill="#00ff95" font-family="Consolas, 'Courier New', monospace" font-size="13">
-      <text x="16" y="104">&gt; const protocol = "ACTIVE";</text>
-      <text x="16" y="126">&gt; encrypt(data_stream);</text>
-      <text x="16" y="148">&gt; sync_nodes(1024);</text>
-      <text x="16" y="170">&gt; await quantumHandshake();</text>
-      <text x="16" y="192">&gt; AI_CORE.STATUS = ONLINE;
-        <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+    <g fill="#e8ddd0" font-family="Consolas, 'Courier New', monospace" font-size="12.5">
+      <text x="16" y="98">&gt; const protocol = "ACTIVE";</text>
+      <text x="16" y="118">&gt; encrypt(data_stream);</text>
+      <text x="16" y="138">&gt; sync_nodes(1024);</text>
+      <text x="16" y="158">&gt; await secureHandshake();</text>
+      <text x="16" y="178" fill="#c9975f">&gt; SYSTEM.STATUS = ONLINE;
+        <animate attributeName="opacity" values="1;0.4;1" dur="2.2s" repeatCount="indefinite"/>
       </text>
     </g>
 
-    <!-- Typing cursor forming code -->
-    <rect x="216" y="181" width="8" height="14" fill="#00ff95">
-      <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+    <!-- Typing cursor -->
+    <rect x="216" y="168" width="7" height="13" fill="#c9975f">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
     </rect>
 
     <!-- Progress -->
-    <text x="0" y="248" fill="#e6f6fb" font-size="13"
+    <text x="0" y="228" fill="#e8ddd0" font-size="12.5"
           font-family="Consolas, 'Courier New', monospace" letter-spacing="1">
       LOADING CORE MODULES...
     </text>
 
-    <rect x="0" y="262" width="360" height="12" rx="6"
-          fill="#08131f" stroke="#00d4ff" stroke-opacity="0.4" stroke-width="1"/>
-    <rect x="0" y="262" width="80" height="12" rx="6" fill="url(#progressGradient)" filter="url(#glow)">
-      <animate attributeName="width" values="80;330;80" dur="6s" repeatCount="indefinite"/>
+    <rect x="0" y="240" width="360" height="10" rx="5"
+          fill="#151010" stroke="#8a5a34" stroke-opacity="0.5" stroke-width="1"/>
+    <rect x="0" y="240" width="80" height="10" rx="5" fill="url(#coffeeGradient)">
+      <animate attributeName="width" values="80;330;80" dur="7s" repeatCount="indefinite"/>
     </rect>
 
-    <!-- Floating binary -->
-    <g fill="#00cfff" font-size="14" font-family="Consolas, 'Courier New', monospace" opacity="0.75">
-      <text x="4" y="320">101101
-        <animateTransform attributeName="transform" type="translate" values="0 0;0 -14;0 0" dur="4s" repeatCount="indefinite"/>
-      </text>
-      <text x="100" y="330">010101
-        <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0" dur="5s" repeatCount="indefinite"/>
-      </text>
-      <text x="196" y="320">111000
-        <animateTransform attributeName="transform" type="translate" values="0 0;0 -12;0 0" dur="4.5s" repeatCount="indefinite"/>
-      </text>
-      <text x="292" y="330">001101
-        <animateTransform attributeName="transform" type="translate" values="0 0;0 -11;0 0" dur="5.5s" repeatCount="indefinite"/>
-      </text>
-    </g>
-
-    <text x="0" y="366" fill="#5c7d8a" font-size="11" letter-spacing="1"
+    <text x="0" y="278" fill="#8a5a34" font-size="11" letter-spacing="1"
           font-family="Consolas, 'Courier New', monospace">
       SESSION READY &#8226; NODE-014 &#8226; UPTIME 99.98%
     </text>
 
-    <!-- ===== Cybersecurity console: threat log ===== -->
-    <text x="0" y="410" fill="#00e5ff" font-size="14" letter-spacing="2"
-          font-family="Consolas, 'Courier New', monospace" filter="url(#glow)">
+    <!-- Security Operations Log -->
+    <text x="0" y="322" fill="#ffffff" font-size="13" letter-spacing="2"
+          font-family="Consolas, 'Courier New', monospace">
       SECURITY OPERATIONS LOG
     </text>
 
-    <rect x="0" y="424" width="360" height="150" rx="8"
-          fill="#061019" stroke="#00d4ff" stroke-opacity="0.35" stroke-width="1"/>
+    <rect x="0" y="336" width="360" height="128" rx="8"
+          fill="#151010" stroke="#8a5a34" stroke-opacity="0.4" stroke-width="1"/>
 
-    <g font-family="Consolas, 'Courier New', monospace" font-size="12.5">
-      <text x="16" y="450" fill="#00ff95">[OK] intrusion_detection --status</text>
-      <text x="16" y="472" fill="#00ff95">[OK] vpn_tunnel.connect(client_014)</text>
-      <text x="16" y="494" fill="#ffbd2e">[WARN] port_scan detected: 192.168.x.x</text>
-      <text x="16" y="516" fill="#00ff95">[OK] auto_block(source_ip); logged;</text>
-      <text x="16" y="538" fill="#00ff95">
+    <g font-family="Consolas, 'Courier New', monospace" font-size="12">
+      <text x="16" y="360" fill="#e8ddd0">[OK] intrusion_detection --status</text>
+      <text x="16" y="380" fill="#e8ddd0">[OK] vpn_tunnel.connect(client_014)</text>
+      <text x="16" y="400" fill="#c9975f">[WARN] port_scan detected</text>
+      <text x="16" y="420" fill="#e8ddd0">[OK] auto_block(source_ip); logged;</text>
+      <text x="16" y="440" fill="#e8ddd0">
         [OK] malware_scan: 0 threats found
-        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.4;1" dur="2.4s" repeatCount="indefinite"/>
       </text>
-      <text x="16" y="560" fill="#7fe9ff">$ tail -f /var/log/secure.log_</text>
     </g>
 
-    <!-- blinking cursor on log -->
-    <rect x="196" y="550" width="7" height="12" fill="#7fe9ff">
+    <rect x="196" y="430" width="6" height="11" fill="#e8ddd0">
       <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
     </rect>
   </g>
 
-  <!-- ============ RIGHT: NETWORK + SCAN RADAR ============ -->
+  <!-- ============ RIGHT: NETWORK + RADAR ============ -->
   <g transform="translate(850,50)">
 
     <!-- Links -->
-    <g stroke="#00cfff" stroke-width="1.3" opacity="0.55">
+    <g stroke="#8a5a34" stroke-width="1.2" opacity="0.6">
       <line x1="30" y1="60" x2="120" y2="30"/>
       <line x1="30" y1="60" x2="105" y2="120"/>
       <line x1="120" y1="30" x2="190" y2="70"/>
@@ -240,98 +191,69 @@
       <line x1="250" y1="130" x2="315" y2="150"/>
       <line x1="315" y1="45" x2="315" y2="150"/>
       <line x1="315" y1="150" x2="20" y2="185"/>
-      <animate attributeName="opacity" values="0.3;0.75;0.3" dur="3s" repeatCount="indefinite"/>
     </g>
 
     <!-- Nodes -->
-    <g fill="#00ffff">
-      <circle cx="30" cy="60" r="5">
-        <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+    <g fill="#e8ddd0">
+      <circle cx="30" cy="60" r="4.5"/>
+      <circle cx="120" cy="30" r="4.5"/>
+      <circle cx="105" cy="120" r="4.5"/>
+      <circle cx="190" cy="70" r="6" fill="#c9975f">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2.4s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="120" cy="30" r="5">
-        <animate attributeName="r" values="5;7;5" begin="0.3s" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="105" cy="120" r="5">
-        <animate attributeName="r" values="5;7;5" begin="0.6s" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="190" cy="70" r="7">
-        <animate attributeName="r" values="7;10;7" dur="2.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="250" cy="130" r="5">
-        <animate attributeName="r" values="5;7;5" begin="1s" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="255" cy="20" r="5">
-        <animate attributeName="r" values="5;7;5" begin="1.3s" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <!-- new nodes -->
-      <circle cx="315" cy="45" r="5">
-        <animate attributeName="r" values="5;7;5" begin="0.8s" dur="2.2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="315" cy="150" r="5">
-        <animate attributeName="r" values="5;7;5" begin="1.6s" dur="2.2s" repeatCount="indefinite"/>
-      </circle>
+      <circle cx="250" cy="130" r="4.5"/>
+      <circle cx="255" cy="20" r="4.5"/>
+      <circle cx="315" cy="45" r="4.5"/>
+      <circle cx="315" cy="150" r="4.5"/>
     </g>
 
-    <!-- Status -->
-    <text x="0" y="222" fill="#00ff95" font-size="12" letter-spacing="1"
+    <text x="0" y="220" fill="#ffffff" font-size="12" letter-spacing="1"
           font-family="Consolas, 'Courier New', monospace">
       NETWORK STATUS : CONNECTED
     </text>
 
-    <!-- ===== Radar / scanning sweep ===== -->
+    <!-- Radar -->
     <g transform="translate(160,330)">
-      <text x="-160" y="-10" fill="#00e5ff" font-size="13" letter-spacing="2"
+      <text x="-160" y="-10" fill="#ffffff" font-size="12" letter-spacing="2"
             font-family="Consolas, 'Courier New', monospace">THREAT RADAR</text>
 
-      <circle r="90" fill="#061019" stroke="#00d4ff" stroke-opacity="0.4" stroke-width="1.5"/>
-      <circle r="60" fill="none" stroke="#00d4ff" stroke-opacity="0.25" stroke-width="1"/>
-      <circle r="30" fill="none" stroke="#00d4ff" stroke-opacity="0.25" stroke-width="1"/>
-      <line x1="-90" y1="0" x2="90" y2="0" stroke="#00d4ff" stroke-opacity="0.2"/>
-      <line x1="0" y1="-90" x2="0" y2="90" stroke="#00d4ff" stroke-opacity="0.2"/>
+      <circle r="85" fill="#151010" stroke="#8a5a34" stroke-opacity="0.5" stroke-width="1.4"/>
+      <circle r="56" fill="none" stroke="#8a5a34" stroke-opacity="0.3" stroke-width="1"/>
+      <circle r="28" fill="none" stroke="#8a5a34" stroke-opacity="0.3" stroke-width="1"/>
+      <line x1="-85" y1="0" x2="85" y2="0" stroke="#8a5a34" stroke-opacity="0.25"/>
+      <line x1="0" y1="-85" x2="0" y2="85" stroke="#8a5a34" stroke-opacity="0.25"/>
 
-      <!-- sweep -->
       <g>
-        <path d="M0 0 L0 -90 A90 90 0 0 1 63.6 -63.6 Z" fill="#00ffb0" opacity="0.25"/>
+        <path d="M0 0 L0 -85 A85 85 0 0 1 60.1 -60.1 Z" fill="#c9975f" opacity="0.22"/>
         <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0"
-                           dur="4s" repeatCount="indefinite"/>
+                           dur="6s" repeatCount="indefinite"/>
       </g>
 
-      <!-- blips -->
-      <circle cx="35" cy="-20" r="3.5" fill="#ff5f56">
-        <animate attributeName="opacity" values="0;1;0" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+      <circle cx="33" cy="-19" r="3" fill="#ffffff">
+        <animate attributeName="opacity" values="0;1;0" dur="3.4s" begin="0.5s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="-50" cy="30" r="3.5" fill="#ffbd2e">
-        <animate attributeName="opacity" values="0;1;0" dur="3.5s" begin="1.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="20" cy="55" r="3.5" fill="#00ff95">
-        <animate attributeName="opacity" values="0;1;0" dur="2.8s" begin="0.2s" repeatCount="indefinite"/>
+      <circle cx="-46" cy="28" r="3" fill="#c9975f">
+        <animate attributeName="opacity" values="0;1;0" dur="4s" begin="1.6s" repeatCount="indefinite"/>
       </circle>
 
-      <circle r="4" fill="#00ffcf" filter="url(#glow)"/>
+      <circle r="3.5" fill="#e8ddd0"/>
     </g>
 
-    <!-- code snippet beside radar -->
-    <g font-family="Consolas, 'Courier New', monospace" font-size="11.5" fill="#00ff95">
-      <text x="-40" y="470">scan.run(target="LAN");</text>
-      <text x="-40" y="490">alerts.push(anomaly);</text>
-      <text x="-40" y="510">status = "SECURED";
-        <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
-      </text>
+    <g font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#c9975f">
+      <text x="-40" y="460">scan.run(target="LAN");</text>
+      <text x="-40" y="480">status = "SECURED";</text>
     </g>
   </g>
 
   <!-- ============ FOOTER STRIP ============ -->
-  <rect x="6" y="596" width="1188" height="38" fill="url(#footerFade)"/>
-  <line x1="0" y1="596" x2="1200" y2="596" stroke="#00d4ff" stroke-opacity="0.25" stroke-width="1"/>
-  <g font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#7fe9ff" opacity="0.85">
-    <text x="30" y="620">SSL/TLS SECURED</text>
-    <text x="240" y="620">24/7 MONITORING</text>
-    <text x="470" y="620">DATA PRIVACY COMPLIANT</text>
-    <text x="760" y="620">BACKUP: AUTOMATED</text>
-    <text x="990" y="620">
-      UPTIME 99.98%
-      <animate attributeName="opacity" values="0.85;0.4;0.85" dur="2.5s" repeatCount="indefinite"/>
-    </text>
+  <rect x="6" y="458" width="1188" height="36" fill="url(#footerFade)"/>
+  <line x1="0" y1="458" x2="1200" y2="458" stroke="#8a5a34" stroke-opacity="0.35" stroke-width="1"/>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="11.5" fill="#c9975f" opacity="0.9">
+    <text x="30" y="481">SSL/TLS SECURED</text>
+    <text x="240" y="481">24/7 MONITORING</text>
+    <text x="470" y="481">DATA PRIVACY COMPLIANT</text>
+    <text x="760" y="481">BACKUP: AUTOMATED</text>
+    <text x="990" y="481" fill="#ffffff">UPTIME 99.98%</text>
   </g>
 
 </svg>
