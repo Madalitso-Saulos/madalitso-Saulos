@@ -22,12 +22,12 @@
 ```
 
 <br/>
-
+## `~$` CyberQoute
 
 ```bash
-madalitso@github:~$ uptime
+$ echo "Think like an attacker. Build like a defender."
 
-Learning every day...
-Securing systems one commit at a time.
-```
+✓ Security is earned every day, not installed once.
+
+
 </div>
