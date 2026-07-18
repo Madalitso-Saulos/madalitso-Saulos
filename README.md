@@ -81,20 +81,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=3B82F6" width="100%"/>
 
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=madalitso-saulos&bg_color=0D1117&color=00BFFF&line=3B82F6&point=ffffff&area=true&hide_border=true" width="100%" alt="Contribution Graph"/>
-
 </div>
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=00BFFF" width="100%"/>
-
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=3B82F6" width="100%"/>
 
 <sub> Securing systems, one commit at a time.</sub>
 </div>
