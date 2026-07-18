@@ -79,86 +79,11 @@
 
 <img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=3B82F6" width="100%"/>
 
-<!-- ================= GITHUB STATS ================= -->
-## `~$` github analytics
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=madalitso-saulos&show_icons=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=00BFFF&icon_color=3B82F6&text_color=c9d1d9&ring_color=00BFFF" alt="GitHub Stats"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=madalitso-saulos&layout=compact&hide_border=true&bg_color=0D1117&title_color=00BFFF&text_color=c9d1d9&langs_count=8" alt="Top Languages"/>
-
-<br/><br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=madalitso-saulos&hide_border=true&background=0D1117&stroke=00BFFF&ring=00BFFF&fire=3B82F6&currStreakLabel=00BFFF&sideLabels=c9d1d9&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=6e7681" alt="GitHub Streak"/>
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=madalitso-saulos&bg_color=0D1117&color=00BFFF&line=3B82F6&point=ffffff&area=true&hide_border=true" width="100%" alt="Contribution Graph"/>
-
-</div>
-
 <br/>
 
 <img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=00BFFF" width="100%"/>
 
-<!-- ================= PROJECTS ================= -->
-## `~$` featured projects
 
-<table width="100%">
-<tr>
-<td width="50%" valign="top">
-
-### 🛰️ Network Sentinel
-Real-time network topology scanner and packet-flow visualizer built for SOC-style monitoring.
-
-`Python` `Scapy` `Sockets` `Flask`
-
-</td>
-<td width="50%" valign="top">
-
-### 🔐 SecureAuth Toolkit
-A hardened authentication and session-management library with fingerprint-style multi-factor verification.
-
-`TypeScript` `Node.js` `JWT` `PostgreSQL`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🕸️ Recon Automation Suite
-Bash + Python pipeline chaining Nmap, Wireshark captures, and custom scripts for repeatable recon workflows.
-
-`Bash` `Python` `Nmap` `Wireshark`
-
-</td>
-<td width="50%" valign="top">
-
-### ⚙️ DevOps Pipeline Starter
-Dockerized CI/CD template with automated linting, testing, and secure deployment gates.
-
-`Docker` `GitHub Actions` `MySQL`
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=3B82F6" width="100%"/>
-
-<!-- ================= WORKSPACE ================= -->
-## `~$` active workspace
-
-```bash
-$ git clone https://github.com/madalitso-saulos/project.git
-$ git commit -m "feat: harden authentication flow"
-$ git push origin main
-$ ssh-keygen -t ed25519 -C "secure-access"
-$ nmap -sV -T4 target.local
-$ sudo systemctl status network-sentinel
-$ python3 recon.py --target 10.0.0.0/24 --verbose
-```
 
 
 <br/>
