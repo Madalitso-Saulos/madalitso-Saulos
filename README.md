@@ -10,9 +10,6 @@
 
 > Building secure, scalable, and innovative digital solutions through software engineering, networking, and cybersecurity.
 
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=00BFFF" width="100%"/>
-
 <!-- ================= ABOUT ================= -->
 ## `~$` whoami
 
@@ -25,6 +22,8 @@
 ```
 
 <br/>
+
+
 ```bash
 madalitso@github:~$ uptime
 
