@@ -8,7 +8,6 @@
 
 # Madalitso Saulos
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2600&pause=900&color=00BFFF&center=false&vCenter=true&width=650&height=45&lines=%F0%9F%92%BB+Software+Developer;%F0%9F%8C%90+Network+Engineer;%F0%9F%94%90+Cybersecurity+Student;%F0%9F%A7%A9+Problem+Solver" alt="Typing SVG" />
 
 > Building secure, scalable, and innovative digital solutions through software engineering, networking, and cybersecurity.
 
