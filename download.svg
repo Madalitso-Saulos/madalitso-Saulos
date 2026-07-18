@@ -83,66 +83,6 @@
 
 <g font-family="'Courier New', monospace" font-size="14">
 
-<text x="20" y="65" fill="#b5342c" filter="url(#textGlowRed)">
-root@cybercafe:~$ ssh admin@10.0.0.1
-<animate attributeName="opacity" values="0.9;0.3;0.9" dur="3.4s" repeatCount="indefinite"/>
-</text>
-
-<text x="20" y="83" fill="#00ff99" filter="url(#textGlowWhite)">
-$ WELCOME TO CYBERCAFE...
-<animate attributeName="opacity" values="0.8;0.9;0.6" dur="2.8s" repeatCount="indefinite"/>
-</text>
-
-<text x="20" y="101" fill="#e8e8e8" filter="url(#textGlowWhite)">
-&gt; Saulos@Github:~$ ./secure_profile
-<animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.5s" repeatCount="indefinite"/>
-</text>
-
-<text x="20" y="119" fill="#00ff99" filter="url(#textGlowWhite)">
-[ OK ] Saulos Github connected
-<animate attributeName="opacity" values="0.9;0.35;0.9" dur="3.9s" repeatCount="indefinite"/>
-</text>
-
-<text x="20" y="137" fill="#e8e8e8" filter="url(#textGlowWhite)">
-PING 192.168.1.1 56(84) bytes
-<animate attributeName="opacity" values="0.65;0.2;0.65" dur="4.1s" repeatCount="indefinite"/>
-</text>
-
-<text x="20" y="155" fill="#00ff99" filter="url(#textGlowWhite)">
-[ OK ] Network daemon started
-<animate attributeName="opacity" values="0.9;0.35;0.9" dur="3.9s" repeatCount="indefinite"/>
-</text>
-
-<text x="20" y="173" fill="#b5342c" filter="url(#textGlowRed)">
-sudo systemctl status firewall
-<animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.5s" repeatCount="indefinite"/>
-</text>
-
-<text x="20" y="191" fill="#e8e8e8" filter="url(#textGlowWhite)">
-&gt; create --secure --deploy project
-<animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.6s" repeatCount="indefinite"/>
-</text>
-
-<text x="20" y="209" fill="#00ff99" filter="url(#textGlowWhite)">
-[ DONE ] Create. Secure. Deploy.
-<animate attributeName="opacity" values="0.9;0.4;0.9" dur="4.4s" repeatCount="indefinite"/>
-</text>
-
-<text x="20" y="227" fill="#e8e8e8" filter="url(#textGlowWhite)">
-Thanks for visiting here :)
-<animate attributeName="opacity" values="0.5;0.9;0.5" dur="3.7s" repeatCount="indefinite"/>
-</text>
-
-</g>
-
-<circle cx="880" cy="70" r="3" fill="#b5342c">
-<animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
-</circle>
-
-<circle cx="880" cy="180" r="2.5" fill="#3ab0ff">
-<animate attributeName="cy" values="180;170;180" dur="3s" repeatCount="indefinite"/>
-</circle>
-</g>
 <!-- ========================= -->
 <!-- Professional Loading Bar -->
 <!-- ========================= -->
@@ -268,4 +208,66 @@ BOOTING SYSTEM
     </tspan>
 
 </text>
+  <!--END  -->
+
+<text x="20" y="65" fill="#b5342c" filter="url(#textGlowRed)">
+root@cybercafe:~$ ssh admin@10.0.0.1
+<animate attributeName="opacity" values="0.9;0.3;0.9" dur="3.4s" repeatCount="indefinite"/>
+</text>
+
+<text x="20" y="83" fill="#00ff99" filter="url(#textGlowWhite)">
+$ WELCOME TO CYBERCAFE...
+<animate attributeName="opacity" values="0.8;0.9;0.6" dur="2.8s" repeatCount="indefinite"/>
+</text>
+
+<text x="20" y="101" fill="#e8e8e8" filter="url(#textGlowWhite)">
+&gt; Saulos@Github:~$ ./secure_profile
+<animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.5s" repeatCount="indefinite"/>
+</text>
+
+<text x="20" y="119" fill="#00ff99" filter="url(#textGlowWhite)">
+[ OK ] Saulos Github connected
+<animate attributeName="opacity" values="0.9;0.35;0.9" dur="3.9s" repeatCount="indefinite"/>
+</text>
+
+<text x="20" y="137" fill="#e8e8e8" filter="url(#textGlowWhite)">
+PING 192.168.1.1 56(84) bytes
+<animate attributeName="opacity" values="0.65;0.2;0.65" dur="4.1s" repeatCount="indefinite"/>
+</text>
+
+<text x="20" y="155" fill="#00ff99" filter="url(#textGlowWhite)">
+[ OK ] Network daemon started
+<animate attributeName="opacity" values="0.9;0.35;0.9" dur="3.9s" repeatCount="indefinite"/>
+</text>
+
+<text x="20" y="173" fill="#b5342c" filter="url(#textGlowRed)">
+sudo systemctl status firewall
+<animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.5s" repeatCount="indefinite"/>
+</text>
+
+<text x="20" y="191" fill="#e8e8e8" filter="url(#textGlowWhite)">
+&gt; create --secure --deploy project
+<animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.6s" repeatCount="indefinite"/>
+</text>
+
+<text x="20" y="209" fill="#00ff99" filter="url(#textGlowWhite)">
+[ DONE ] Create. Secure. Deploy.
+<animate attributeName="opacity" values="0.9;0.4;0.9" dur="4.4s" repeatCount="indefinite"/>
+</text>
+
+<text x="20" y="227" fill="#e8e8e8" filter="url(#textGlowWhite)">
+Thanks for visiting here :)
+<animate attributeName="opacity" values="0.5;0.9;0.5" dur="3.7s" repeatCount="indefinite"/>
+</text>
+
+</g>
+
+<circle cx="880" cy="70" r="3" fill="#b5342c">
+<animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="880" cy="180" r="2.5" fill="#3ab0ff">
+<animate attributeName="cy" values="180;170;180" dur="3s" repeatCount="indefinite"/>
+</circle>
+</g>
 </svg>
