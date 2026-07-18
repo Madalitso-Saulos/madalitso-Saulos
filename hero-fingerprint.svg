@@ -1,0 +1,160 @@
+<svg width="100%" height="420" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated cybersecurity fingerprint and network hero banner">
+  <defs>
+    <radialGradient id="bgGlow" cx="30%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#0a2540" stop-opacity="0.9"/>
+      <stop offset="45%" stop-color="#0D1117" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="edgeFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0D1117" stop-opacity="0"/>
+      <stop offset="8%" stop-color="#0D1117" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="laserGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00BFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00BFFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#00BFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="hexPattern" width="52" height="90" patternUnits="userSpaceOnUse" patternTransform="translate(0,0)">
+      <path d="M26 0 L52 15 L52 45 L26 60 L0 45 L0 15 Z" fill="none" stroke="#1f3a5f" stroke-width="1" opacity="0.35"/>
+      <path d="M26 60 L52 75 L52 105 L26 120 L0 105 L0 75 Z" fill="none" stroke="#1f3a5f" stroke-width="1" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- Base -->
+  <rect width="1200" height="420" fill="#0D1117"/>
+  <rect width="1200" height="420" fill="url(#bgGlow)"/>
+  <rect width="1200" height="420" fill="url(#hexPattern)">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 90" dur="18s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Matrix falling code (subtle) -->
+  <g font-family="JetBrains Mono, monospace" font-size="12" fill="#00BFFF" opacity="0.16">
+    <text x="60" y="0">01 10 01</text>
+    <animateTransform attributeName="transform" type="translate" values="0,-20; 0,440" dur="7s" repeatCount="indefinite"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="12" fill="#3B82F6" opacity="0.14">
+    <text x="130" y="0">1 0 1 1 0</text>
+    <animateTransform attributeName="transform" type="translate" values="0,-30; 0,450" dur="9.5s" begin="1s" repeatCount="indefinite"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="12" fill="#00BFFF" opacity="0.12">
+    <text x="1080" y="0">0 1 0 0 1</text>
+    <animateTransform attributeName="transform" type="translate" values="0,-25; 0,460" dur="8.2s" begin="2.3s" repeatCount="indefinite"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="12" fill="#3B82F6" opacity="0.13">
+    <text x="1000" y="0">10 01 11</text>
+    <animateTransform attributeName="transform" type="translate" values="0,-15; 0,440" dur="10.5s" begin="0.6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Floating drifting code fragments -->
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="#5eb8ff" filter="url(#softGlow)">
+    <text x="70" y="60" opacity="0.22">$ git clone repo.git</text>
+    <animate attributeName="opacity" values="0.05;0.3;0.05" dur="6s" repeatCount="indefinite"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="#5eb8ff" filter="url(#softGlow)">
+    <text x="60" y="330" opacity="0.2">$ nmap -sV target</text>
+    <animate attributeName="opacity" values="0.28;0.05;0.28" dur="7s" begin="1s" repeatCount="indefinite"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="#3B82F6" filter="url(#softGlow)">
+    <text x="900" y="70" opacity="0.2">SELECT * FROM users;</text>
+    <animate attributeName="opacity" values="0.05;0.25;0.05" dur="8s" begin="2s" repeatCount="indefinite"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="#5eb8ff" filter="url(#softGlow)">
+    <text x="950" y="130" opacity="0.18">sudo systemctl restart</text>
+    <animate attributeName="opacity" values="0.2;0.04;0.2" dur="6.5s" begin="0.5s" repeatCount="indefinite"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="#3B82F6" filter="url(#softGlow)">
+    <text x="880" y="340" opacity="0.18">ssh-keygen -t ed25519</text>
+    <animate attributeName="opacity" values="0.05;0.22;0.05" dur="9s" begin="1.4s" repeatCount="indefinite"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="#5eb8ff" filter="url(#softGlow)">
+    <text x="820" y="230" opacity="0.16">git push origin main</text>
+    <animate attributeName="opacity" values="0.18;0.03;0.18" dur="7.5s" begin="2.6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Network topology: nodes + connecting lines -->
+  <g stroke="#00BFFF" stroke-width="1" opacity="0.45">
+    <line x1="760" y1="90" x2="900" y2="60"/>
+    <line x1="760" y1="90" x2="960" y2="180"/>
+    <line x1="900" y1="60" x2="1050" y2="120"/>
+    <line x1="960" y1="180" x2="1050" y2="120"/>
+    <line x1="960" y1="180" x2="900" y2="300"/>
+    <line x1="900" y1="300" x2="1030" y2="330"/>
+    <line x1="1050" y1="120" x2="1030" y2="330"/>
+    <line x1="760" y1="90" x2="900" y2="300"/>
+  </g>
+  <g fill="#00BFFF" filter="url(#glow)">
+    <circle cx="760" cy="90" r="5"/>
+    <circle cx="900" cy="60" r="4"/>
+    <circle cx="960" cy="180" r="5.5"/>
+    <circle cx="1050" cy="120" r="4"/>
+    <circle cx="900" cy="300" r="5"/>
+    <circle cx="1030" cy="330" r="4"/>
+  </g>
+  <!-- Traveling data packets -->
+  <circle r="3.4" fill="#3ddcff" filter="url(#glow)">
+    <animateMotion dur="3.2s" repeatCount="indefinite" path="M760,90 L900,60 L1050,120 L960,180 Z"/>
+  </circle>
+  <circle r="3.4" fill="#3ddcff" filter="url(#glow)">
+    <animateMotion dur="4.1s" begin="0.8s" repeatCount="indefinite" path="M960,180 L900,300 L1030,330 L1050,120 Z"/>
+  </circle>
+  <circle r="3" fill="#3ddcff" filter="url(#glow)">
+    <animateMotion dur="3.7s" begin="1.5s" repeatCount="indefinite" path="M760,90 L900,300"/>
+  </circle>
+
+  <!-- Digital fingerprint (concentric ridge arcs) -->
+  <g transform="translate(300,210)" filter="url(#glow)">
+    <g opacity="0.9">
+      <path d="M -20,-140 C 80,-150 150,-90 150,0 C 150,100 80,150 -20,140" fill="none" stroke="#00BFFF" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M -35,-118 C 60,-128 122,-74 122,0 C 122,80 60,124 -35,118" fill="none" stroke="#00BFFF" stroke-width="2.2" stroke-linecap="round" opacity="0.9"/>
+      <path d="M -48,-96 C 42,-104 96,-58 96,0 C 96,64 42,100 -48,96" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+      <path d="M -58,-74 C 24,-80 72,-44 72,0 C 72,48 24,76 -58,74" fill="none" stroke="#00BFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+      <path d="M -66,-52 C 8,-58 50,-30 50,0 C 50,34 8,52 -66,52" fill="none" stroke="#3B82F6" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+      <path d="M -70,-30 C -2,-34 30,-16 30,0 C 30,18 -2,30 -70,30" fill="none" stroke="#00BFFF" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+      <path d="M -50,-10 C -20,-14 8,-6 8,0 C 8,6 -20,14 -50,10" fill="none" stroke="#3ddcff" stroke-width="1.2" stroke-linecap="round" opacity="0.65"/>
+    </g>
+    <!-- Pulse rings across the fingerprint -->
+    <circle r="30" fill="none" stroke="#00BFFF" stroke-width="1.5" opacity="0">
+      <animate attributeName="r" values="20;170" dur="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="30" fill="none" stroke="#3B82F6" stroke-width="1.2" opacity="0">
+      <animate attributeName="r" values="20;170" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.45;0" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Central auth core -->
+    <circle r="6" fill="#3ddcff">
+      <animate attributeName="r" values="5;8;5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Ambient particles -->
+  <g fill="#00BFFF">
+    <circle cx="200" cy="60" r="1.6" opacity="0.6"><animate attributeName="cy" values="60;40;60" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="480" cy="90" r="1.4" opacity="0.5"><animate attributeName="cy" values="90;70;90" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="150" cy="330" r="1.8" opacity="0.55"><animate attributeName="cy" values="330;310;330" dur="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="470" cy="350" r="1.5" opacity="0.5"><animate attributeName="cy" values="350;330;350" dur="3.8s" repeatCount="indefinite"/></circle>
+    <circle cx="560" cy="200" r="1.7" opacity="0.55"><animate attributeName="cy" values="200;180;200" dur="4.2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Scanning laser sweep -->
+  <rect x="0" y="-40" width="1200" height="40" fill="url(#laserGrad)">
+    <animateTransform attributeName="transform" type="translate" values="0,-40; 0,460" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <rect width="1200" height="420" fill="url(#edgeFade)"/>
+</svg>
