@@ -59,30 +59,6 @@
 ```
 
 <br/>
-
-<!-- ================= TECH STACK ================= -->
-## `~$` tech stack
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=git,github,linux,python,js,html,css,ts,docker,mysql,bash,vscode&theme=dark&perline=6" alt="Tech stack icons"/>
-
-<br/><br/>
-
-<img src="https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white&labelColor=0D1117" alt="Cisco"/>
-<img src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white&labelColor=0D1117" alt="Wireshark"/>
-<img src="https://img.shields.io/badge/Nmap-00BFFF?style=for-the-badge&logo=nmap&logoColor=white&labelColor=0D1117" alt="Nmap"/>
-<img src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white&labelColor=0D1117" alt="Kali Linux"/>
-<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white&labelColor=0D1117" alt="Postman"/>
-
-</div>
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=3B82F6" width="100%"/>
-
-</div>
-
 <sub> Securing systems, one commit at a time.</sub>
 </div>
 
