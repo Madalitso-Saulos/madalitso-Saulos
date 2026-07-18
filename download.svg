@@ -42,7 +42,7 @@
 <g clip-path="url(#frame)">
 <rect x="0" y="0" width="800" height="260" fill="url(#bgGrad)"/>
   
-<g stroke="url(#lineGrad)" stroke-width="0.7">
+<g stroke="url(#lineGrad)" stroke-width="1.2">
 <line x1="380" y1="30" x2="450" y2="80"><animate attributeName="opacity" values="0.15;0.5;0.15" dur="3.2s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" repeatCount="indefinite"/></line>
 <line x1="380" y1="30" x2="500" y2="45"><animate attributeName="opacity" values="0.45;0.1;0.45" dur="2.6s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" repeatCount="indefinite"/></line>
 <line x1="380" y1="30" x2="420" y2="120"><animate attributeName="opacity" values="0.2;0.5;0.2" dur="4.1s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" repeatCount="indefinite"/></line>
@@ -90,7 +90,7 @@ root@cybercafe:~$ ssh admin@10.0.0.1
 
 <text x="20" y="83" fill="#00ff99" filter="url(#textGlowWhite)">
 $ WELCOME TO CYBERCAFE...
-<animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.8s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0.8;0.9;0.6" dur="2.8s" repeatCount="indefinite"/>
 </text>
 
 <text x="20" y="101" fill="#e8e8e8" filter="url(#textGlowWhite)">
