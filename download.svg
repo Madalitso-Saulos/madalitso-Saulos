@@ -113,7 +113,7 @@ BOOTING SYSTEM
       width="0"
       height="6"
       rx="3"
-      fill="#ff3b3b">
+      fill="#b5342c">
     <animate
         attributeName="width"
         values="0;180"
