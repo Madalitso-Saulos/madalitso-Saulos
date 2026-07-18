@@ -138,14 +138,5 @@ Thanks for visiting here :)
 <circle cx="880" cy="180" r="2.5" fill="#3ab0ff">
 <animate attributeName="cy" values="180;170;180" dur="3s" repeatCount="indefinite"/>
 </circle>
-
-
-<rect x="36" y="152" width="150" height="4" rx="2" fill="#111" stroke="#1d3a4a" stroke-width="0.6"/>
-<rect x="36" y="152" width="0" height="4" rx="2" fill="url(#barGrad)">
-<animate attributeName="width" values="0;150;0" keyTimes="0;0.85;1" dur="5s" calcMode="spline" keySplines="0.25 0.1 0.25 1;0.4 0 1 1" repeatCount="indefinite"/>
-</rect>
-<rect x="36" y="152" width="150" height="4" rx="2" fill="#3ab0ff" opacity="0">
-<animate attributeName="opacity" values="0;0.5;0" dur="5s" repeatCount="indefinite"/>
-</rect>
 </g>
 </svg>
