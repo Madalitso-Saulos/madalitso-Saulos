@@ -1,137 +1,66 @@
 <div align="center">
 
-<img src="download.svg" width="100%" alt="Animated Cybersecurity Banner"/>
+<img src="download.svg" width="100%" alt="Animated digital fingerprint and network hero banner"/>
 
 </div>
 
 <div align="left">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2600&pause=900&color=8B0000&center=false&vCenter=true&width=700&height=45&lines=Software+Developer;Network+Engineer;Cybersecurity+Student;Open+Source+Contributor;Building+Secure+Systems" alt="Typing SVG"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2600&pause=900&color=00BFFF&center=false&vCenter=true&width=650&height=45&lines=%F0%9F%92%BB+Software+Developer;%F0%9F%8C%90+Network+Engineer;%F0%9F%94%90+Cybersecurity+Student;%F0%9F%9A%80+Open+Source+Contributor;%F0%9F%A7%A9+Problem+Solver" alt="Typing SVG" />
 
-```bash
-$ sudo initialize --profile
-
-> loading profile..................... [ OK ]
-> authenticating developer............ [ OK ]
-> loading secure modules.............. [ OK ]
-> initializing network stack.......... [ OK ]
-> enabling threat monitoring.......... [ OK ]
-> profile loaded successfully
-```
-
-> Building secure, scalable, and resilient digital solutions through software engineering, networking, and cybersecurity.
+> Building secure, scalable, and innovative digital solutions through software engineering, networking, and cybersecurity.
 
 <a href="#-featured-projects">
-<img src="https://img.shields.io/badge/EXPLORE_PROJECTS-8B0000?style=for-the-badge&labelColor=0D1117&color=8B0000" />
+  <img src="https://img.shields.io/badge/Explore_Projects-00BFFF?style=for-the-badge&logo=rocket&logoColor=0D1117&labelColor=0D1117" alt="Explore Projects"/>
 </a>
-
 <a href="https://github.com/madalitso-saulos">
-<img src="https://img.shields.io/badge/GITHUB_PROFILE-161B22?style=for-the-badge&logo=github&logoColor=8B0000&labelColor=0D1117" />
+  <img src="https://img.shields.io/badge/View_GitHub_Profile-0D1117?style=for-the-badge&logo=github&logoColor=00BFFF&labelColor=0D1117&color=161B22" alt="View GitHub Profile"/>
 </a>
 
 </div>
 
-<br>
+<br/>
 
+<!-- ================= STATS STRIP ================= -->
 <div align="center">
 
 <table>
 <tr>
-
-<td align="center">
-<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadalitso-saulos&label=REPOSITORIES&query=%24.public_repos&color=8B0000&style=for-the-badge&labelColor=0D1117"/>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadalitso-saulos&label=REPOSITORIES&query=%24.public_repos&color=00BFFF&style=for-the-badge&labelColor=0D1117" alt="Repositories"/>
 </td>
-
-<td align="center">
-<img src="https://img.shields.io/badge/COMMITS-1.2K+-A30000?style=for-the-badge&labelColor=0D1117"/>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/COMMITS-1.2K%2B-3B82F6?style=for-the-badge&labelColor=0D1117" alt="Commits"/>
 </td>
-
-<td align="center">
-<img src="https://img.shields.io/badge/TECH_STACK-20+-8B0000?style=for-the-badge&labelColor=0D1117"/>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/TECHNOLOGIES-20%2B-00BFFF?style=for-the-badge&labelColor=0D1117" alt="Technologies"/>
 </td>
-
-<td align="center">
-<img src="https://img.shields.io/badge/CERTIFICATIONS-IN_PROGRESS-B22222?style=for-the-badge&labelColor=0D1117"/>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/CERTIFICATIONS-In_Progress-3B82F6?style=for-the-badge&labelColor=0D1117" alt="Certifications"/>
 </td>
-
 </tr>
 </table>
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=35&section=divider&color=8B0000" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=00BFFF" width="100%"/>
 
-## `~$ whoami`
-
-```bash
-$ cat profile.conf
-
-NAME        = Madalitso Saulos
-ROLE        = Software Developer
-NETWORKING  = Cisco | TCP/IP | Routing | Switching
-SECURITY    = Cybersecurity | Digital Forensics | Linux
-LANGUAGES   = HTML | CSS | JavaScript | Python | SQL
-STATUS      = Learning • Building • Securing
-MISSION     = Designing secure, scalable and resilient systems
-```
+<!-- ================= ABOUT ================= -->
+## `~$` whoami
 
 ```bash
-$ systemctl status security.service
-
-● security.service - Cyber Defense Engine
-──────────────────────────────────────────────
-
-[ OK ] Firewall ................. ACTIVE
-[ OK ] Secure Coding ............ ENABLED
-[ OK ] Network Monitoring ....... RUNNING
-[ OK ] Threat Detection ......... RUNNING
-[ OK ] Digital Forensics ........ READY
-[ OK ] Open Source .............. CONTRIBUTING
-
-Process completed successfully.
+> name         : Madalitso Saulos
+> role         : Software Developer / Network Engineer / Cybersecurity Student
+> focus        : Secure systems, resilient networks, clean code
+> currently    : Studying cybersecurity while shipping full-stack + network tooling
+> status       : Open to collaboration on open-source security & dev projects
 ```
+
+<br/>
 
 ```bash
-$ tail -15 /var/log/security.log
+$ echo "Think like an attacker. Build like a defender."
 
-12:40:08 INFO  Initializing secure environment...
-12:40:09 INFO  Loading encrypted configuration...
-12:40:10 INFO  Establishing trusted connections...
-12:40:11 INFO  Monitoring network traffic...
-12:40:12 INFO  Detecting anomalies...
-12:40:13 INFO  Scanning attack surface...
-12:40:14 INFO  Hardening operating system...
-12:40:15 INFO  Verifying file integrity...
-12:40:16 INFO  Encrypting sensitive assets...
-12:40:17 INFO  Building secure applications...
-12:40:18 INFO  Learning never stops...
-12:40:19 INFO  Mission status: ACTIVE
-```
+✓ Security is earned every day, not installed once.
 
-```text
-═══════════════════════════════════════════════════════
-
-> root@security:~$ echo "Cybersecurity Quote"
-
-"Attackers search for one weakness.
-Defenders strengthen every layer."
-
-> Security is not a destination.
-> It is a continuous commitment to learning,
-> adapting, and protecting.
-
-═══════════════════════════════════════════════════════
-```
-
-```bash
-$ logout
-
-Saving session...
-Closing secure connection...
-Destroying temporary keys...
-Session terminated.
-
-Stay Curious.
-Stay Ethical.
-Stay Secure.
-```
+<sub> Securing systems, one commit at a time.</sub>
