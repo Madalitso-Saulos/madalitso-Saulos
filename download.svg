@@ -95,6 +95,14 @@
 <text x="20" y="227" fill="#e8e8e8" filter="url(#textGlowWhite)">&gt; decrypting packet 0x9B1C<animate attributeName="opacity" values="0.5;0.9;0.5" dur="3.7s" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" repeatCount="indefinite"/></text>
 </g>
 
+<circle cx="880" cy="70" r="3" fill="#b5342c">
+<animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
+</circle>
+
+<circle cx="880" cy="180" r="2.5" fill="#3ab0ff">
+<animate attributeName="cy" values="180;170;180" dur="3s" repeatCount="indefinite"/>
+</circle>
+
 
 <rect x="36" y="152" width="150" height="4" rx="2" fill="#111" stroke="#1d3a4a" stroke-width="0.6"/>
 <rect x="36" y="152" width="0" height="4" rx="2" fill="url(#barGrad)">
