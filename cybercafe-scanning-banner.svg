@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
   <defs>
     <!-- Background gradient -->
     <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
-      <stop offset="0%" stop-color="#1a3a5c"/>
-      <stop offset="100%" stop-color="#0a1628"/>
+      <stop offset="0%" style="stop-color:#1a2a5e;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a0e2a;stop-opacity:1"/>
     </radialGradient>
 
-    <!-- Glow effect -->
+    <!-- Glow filter -->
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
       <feMerge>
@@ -15,242 +15,287 @@
       </feMerge>
     </filter>
 
+    <!-- Soft glow -->
     <filter id="softGlow">
-      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- Grid pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2a5a8a" stroke-width="0.5" opacity="0.3"/>
-    </pattern>
+    <!-- Pulse animation for nodes -->
+    <animateTransform id="pulse1" attributeName="transform" type="scale" values="1;1.3;1" dur="2s" repeatCount="indefinite"/>
+    <animateTransform id="pulse2" attributeName="transform" type="scale" values="1;1.2;1" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+    <animateTransform id="pulse3" attributeName="transform" type="scale" values="1;1.4;1" dur="1.8s" repeatCount="indefinite" begin="1s"/>
 
-    <!-- Hex pattern -->
-    <pattern id="hexPattern" width="30" height="26" patternUnits="userSpaceOnUse">
-      <path d="M15 0 L30 8.66 L30 17.32 L15 26 L0 17.32 L0 8.66 Z" fill="none" stroke="#1a6aaa" stroke-width="0.5" opacity="0.15"/>
-    </pattern>
+    <!-- Loading bar animation -->
+    <animate id="load1" attributeName="width" values="0;180;0" dur="3s" repeatCount="indefinite"/>
+    <animate id="load2" attributeName="width" values="0;250;0" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+    <animate id="load3" attributeName="width" values="0;130;0" dur="2.5s" repeatCount="indefinite" begin="1s"/>
+    <animate id="load4" attributeName="width" values="0;300;0" dur="3.5s" repeatCount="indefinite" begin="0.3s"/>
 
-    <!-- Gradient for network lines -->
-    <linearGradient id="netGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4a9eff"/>
-      <stop offset="100%" stop-color="#00d4ff"/>
-    </linearGradient>
+    <!-- Network line animation (dash offset) -->
+    <animate id="dashAnim1" attributeName="stroke-dashoffset" values="0;-20" dur="1s" repeatCount="indefinite"/>
+    <animate id="dashAnim2" attributeName="stroke-dashoffset" values="0;-15" dur="1.2s" repeatCount="indefinite"/>
 
-    <linearGradient id="netGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6aafff"/>
-      <stop offset="100%" stop-color="#2a7aff"/>
-    </linearGradient>
-
-    <!-- Fingerprint gradient -->
-    <linearGradient id="fpGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#4af0ff"/>
-      <stop offset="100%" stop-color="#0066ff"/>
-    </linearGradient>
-
-    <!-- Code gradient -->
-    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00d4ff"/>
-      <stop offset="100%" stop-color="#4a9eff"/>
-    </linearGradient>
+    <!-- Fingerprint scan animation -->
+    <animate id="scanLine" attributeName="cy" values="0;120;0" dur="2s" repeatCount="indefinite"/>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="600" fill="url(#bgGrad)"/>
-  <rect width="800" height="600" fill="url(#grid)"/>
-  <rect width="800" height="600" fill="url(#hexPattern)"/>
+  <rect width="800" height="500" fill="url(#bgGrad)" rx="12"/>
 
-  <!-- Decorative circles -->
-  <circle cx="150" cy="100" r="80" fill="none" stroke="#1a5a8a" stroke-width="0.5" opacity="0.3"/>
-  <circle cx="150" cy="100" r="120" fill="none" stroke="#1a5a8a" stroke-width="0.5" opacity="0.2"/>
-  <circle cx="650" cy="500" r="100" fill="none" stroke="#1a5a8a" stroke-width="0.5" opacity="0.3"/>
-  <circle cx="650" cy="500" r="140" fill="none" stroke="#1a5a8a" stroke-width="0.5" opacity="0.2"/>
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04">
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#88ccff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="800" height="500" fill="url(#grid)"/>
+  </g>
 
-  <!-- ===== NETWORK NODES AND CONNECTIONS ===== -->
-  <g filter="url(#glow)">
+  <!-- Border glow -->
+  <rect width="800" height="500" fill="none" stroke="#2a4a8a" stroke-width="2" rx="12" opacity="0.5"/>
+
+  <!-- ============ NETWORK NODES (Top Right Area) ============ -->
+  <g transform="translate(520, 60)" filter="url(#glow)">
     <!-- Connection lines -->
-    <line x1="120" y1="180" x2="250" y2="120" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.6"/>
-    <line x1="120" y1="180" x2="180" y2="300" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
-    <line x1="120" y1="180" x2="80" y2="280" stroke="url(#netGrad2)" stroke-width="1" opacity="0.4"/>
-    <line x1="250" y1="120" x2="350" y2="200" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.6"/>
-    <line x1="250" y1="120" x2="300" y2="80" stroke="url(#netGrad2)" stroke-width="1" opacity="0.4"/>
-    <line x1="180" y1="300" x2="350" y2="200" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
-    <line x1="180" y1="300" x2="120" y2="400" stroke="url(#netGrad2)" stroke-width="1.5" opacity="0.5"/>
-    <line x1="350" y1="200" x2="450" y2="150" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.6"/>
-    <line x1="350" y1="200" x2="400" y2="320" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
-    <line x1="120" y1="400" x2="280" y2="420" stroke="url(#netGrad2)" stroke-width="1.5" opacity="0.5"/>
-    <line x1="280" y1="420" x2="400" y2="320" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
-    <line x1="450" y1="150" x2="550" y2="100" stroke="url(#netGrad2)" stroke-width="1" opacity="0.4"/>
-    <line x1="450" y1="150" x2="600" y2="220" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
-    <line x1="400" y1="320" x2="550" y2="350" stroke="url(#netGrad2)" stroke-width="1.5" opacity="0.5"/>
-    <line x1="600" y1="220" x2="550" y2="350" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
-    <line x1="550" y1="100" x2="700" y2="150" stroke="url(#netGrad2)" stroke-width="1" opacity="0.4"/>
-    <line x1="600" y1="220" x2="720" y2="280" stroke="url(#netGrad1)" stroke-width="1.5" opacity="0.5"/>
-    <line x1="550" y1="350" x2="680" y2="400" stroke="url(#netGrad2)" stroke-width="1.5" opacity="0.5"/>
-    <line x1="700" y1="150" x2="720" y2="280" stroke="url(#netGrad1)" stroke-width="1" opacity="0.4"/>
+    <g stroke="#4488dd" stroke-width="1.5" opacity="0.6">
+      <line x1="0" y1="0" x2="60" y2="50" stroke-dasharray="4,4">
+        <animate attributeName="stroke-dashoffset" values="0;-8" dur="0.8s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="0" x2="80" y2="-10" stroke-dasharray="3,5">
+        <animate attributeName="stroke-dashoffset" values="0;-8" dur="1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="0" x2="-20" y2="60" stroke-dasharray="5,3">
+        <animate attributeName="stroke-dashoffset" values="0;-8" dur="0.7s" repeatCount="indefinite"/>
+      </line>
+      <line x1="60" y1="50" x2="80" y2="-10" stroke-dasharray="4,4">
+        <animate attributeName="stroke-dashoffset" values="0;-8" dur="1.1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="60" y1="50" x2="130" y2="30" stroke-dasharray="3,5">
+        <animate attributeName="stroke-dashoffset" values="0;-8" dur="0.9s" repeatCount="indefinite"/>
+      </line>
+      <line x1="80" y1="-10" x2="130" y2="30" stroke-dasharray="4,3">
+        <animate attributeName="stroke-dashoffset" values="0;-7" dur="1.2s" repeatCount="indefinite"/>
+      </line>
+      <line x1="-20" y1="60" x2="60" y2="50" stroke-dasharray="5,4">
+        <animate attributeName="stroke-dashoffset" values="0;-9" dur="0.6s" repeatCount="indefinite"/>
+      </line>
+      <line x1="130" y1="30" x2="160" y2="70" stroke-dasharray="3,4">
+        <animate attributeName="stroke-dashoffset" values="0;-7" dur="1.3s" repeatCount="indefinite"/>
+      </line>
+    </g>
 
-    <!-- Network nodes -->
-    <circle cx="120" cy="180" r="6" fill="#00d4ff" opacity="0.9"/>
-    <circle cx="250" cy="120" r="5" fill="#4a9eff" opacity="0.9"/>
-    <circle cx="180" cy="300" r="5" fill="#00d4ff" opacity="0.8"/>
-    <circle cx="80" cy="280" r="4" fill="#4a9eff" opacity="0.6"/>
-    <circle cx="300" cy="80" r="4" fill="#4a9eff" opacity="0.6"/>
-    <circle cx="350" cy="200" r="7" fill="#00d4ff" opacity="0.9"/>
-    <circle cx="120" cy="400" r="5" fill="#4a9eff" opacity="0.8"/>
-    <circle cx="450" cy="150" r="5" fill="#00d4ff" opacity="0.8"/>
-    <circle cx="400" cy="320" r="6" fill="#4a9eff" opacity="0.9"/>
-    <circle cx="280" cy="420" r="5" fill="#00d4ff" opacity="0.8"/>
-    <circle cx="550" cy="100" r="4" fill="#4a9eff" opacity="0.7"/>
-    <circle cx="600" cy="220" r="5" fill="#00d4ff" opacity="0.8"/>
-    <circle cx="550" cy="350" r="5" fill="#4a9eff" opacity="0.8"/>
-    <circle cx="700" cy="150" r="4" fill="#00d4ff" opacity="0.7"/>
-    <circle cx="720" cy="280" r="5" fill="#4a9eff" opacity="0.8"/>
-    <circle cx="680" cy="400" r="4" fill="#00d4ff" opacity="0.7"/>
+    <!-- Nodes -->
+    <g>
+      <circle cx="0" cy="0" r="10" fill="#66aaff" opacity="0.9">
+        <animate attributeName="r" values="10;13;10" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="5" fill="#aaddff"/>
+    </g>
 
-    <!-- Pulsing nodes -->
-    <circle cx="120" cy="180" r="10" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.4">
-      <animate attributeName="r" values="6;14;6" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" repeatCount="indefinite"/>
+    <g>
+      <circle cx="60" cy="50" r="8" fill="#44ddbb" opacity="0.9">
+        <animate attributeName="r" values="8;11;8" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+      <circle cx="60" cy="50" r="4" fill="#88ffdd"/>
+    </g>
+
+    <g>
+      <circle cx="80" cy="-10" r="6" fill="#ff8844" opacity="0.9">
+        <animate attributeName="r" values="6;9;6" dur="1.8s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+      <circle cx="80" cy="-10" r="3" fill="#ffbb88"/>
+    </g>
+
+    <g>
+      <circle cx="-20" cy="60" r="7" fill="#aa66ff" opacity="0.9">
+        <animate attributeName="r" values="7;10;7" dur="2.2s" repeatCount="indefinite" begin="0.3s"/>
+      </circle>
+      <circle cx="-20" cy="60" r="3.5" fill="#ddbbff"/>
+    </g>
+
+    <g>
+      <circle cx="130" cy="30" r="9" fill="#66ff99" opacity="0.9">
+        <animate attributeName="r" values="9;12;9" dur="1.6s" repeatCount="indefinite" begin="0.8s"/>
+      </circle>
+      <circle cx="130" cy="30" r="4.5" fill="#bbffdd"/>
+    </g>
+
+    <g>
+      <circle cx="160" cy="70" r="5" fill="#ff66aa" opacity="0.8">
+        <animate attributeName="r" values="5;8;5" dur="2.8s" repeatCount="indefinite" begin="0.2s"/>
+      </circle>
+      <circle cx="160" cy="70" r="2.5" fill="#ffbbdd"/>
+    </g>
+  </g>
+
+  <!-- Network label -->
+  <text x="530" y="175" font-family="'Courier New', monospace" font-size="10" fill="#4488dd" opacity="0.7">● NETWORK NODES</text>
+
+  <!-- ============ CODE BLOCK (Left Side) ============ -->
+  <g transform="translate(30, 30)">
+    <!-- Code block background -->
+    <rect x="0" y="0" width="200" height="140" rx="6" fill="#0a0e1a" stroke="#1a3a6a" stroke-width="1" opacity="0.8"/>
+
+    <!-- Window dots -->
+    <circle cx="12" cy="12" r="4" fill="#ff5f56" opacity="0.7"/>
+    <circle cx="26" cy="12" r="4" fill="#ffbd2e" opacity="0.7"/>
+    <circle cx="40" cy="12" r="4" fill="#27c93f" opacity="0.7"/>
+
+    <!-- Code lines with typing cursor animation -->
+    <g font-family="'Courier New', monospace" font-size="10" fill="#66aaff">
+      <!-- Line 1 -->
+      <text x="10" y="40">$ git clone repo</text>
+      <text x="10" y="40" fill="#88ddff" opacity="0">|</text>
+
+      <!-- Line 2 -->
+      <text x="10" y="58" fill="#88dd88">function init() {</text>
+
+      <!-- Line 3 -->
+      <text x="20" y="76" fill="#ffaa66">const node = new Node();</text>
+
+      <!-- Line 4 -->
+      <text x="20" y="94" fill="#66ddff">node.connect(</text>
+
+      <!-- Line 5 -->
+      <text x="30" y="112" fill="#dd88ff">"network",</text>
+
+      <!-- Line 6 -->
+      <text x="30" y="130" fill="#ff8888">port: 8080</text>
+
+      <!-- Blinking cursor at end -->
+      <text x="10" y="40" fill="#88ddff" opacity="1">
+        <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+      </text>
+    </g>
+  </g>
+
+  <!-- Code block label -->
+  <text x="35" y="185" font-family="'Courier New', monospace" font-size="10" fill="#4488dd" opacity="0.7">◀ DEPLOYMENT CODE</text>
+
+  <!-- ============ LOADING BARS (Center Bottom) ============ -->
+  <g transform="translate(40, 230)">
+    <text x="0" y="0" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#88bbee" opacity="0.8">SYSTEM STATUS</text>
+
+    <!-- Bar 1 -->
+    <text x="0" y="25" font-family="'Courier New', monospace" font-size="9" fill="#4488aa">● LOADING MODULES</text>
+    <rect x="0" y="32" width="200" height="6" rx="3" fill="#0a1a3a" stroke="#1a4a7a" stroke-width="0.5"/>
+    <rect x="0" y="32" width="0" height="6" rx="3" fill="#44ddff" opacity="0.8">
+      <animate attributeName="width" values="0;180;0" dur="3s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Bar 2 -->
+    <text x="0" y="52" font-family="'Courier New', monospace" font-size="9" fill="#4488aa">● NETWORK SYNC</text>
+    <rect x="0" y="59" width="200" height="6" rx="3" fill="#0a1a3a" stroke="#1a4a7a" stroke-width="0.5"/>
+    <rect x="0" y="59" width="0" height="6" rx="3" fill="#66ff88" opacity="0.8">
+      <animate attributeName="width" values="0;250;0" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+
+    <!-- Bar 3 -->
+    <text x="0" y="79" font-family="'Courier New', monospace" font-size="9" fill="#4488aa">● AUTHENTICATION</text>
+    <rect x="0" y="86" width="200" height="6" rx="3" fill="#0a1a3a" stroke="#1a4a7a" stroke-width="0.5"/>
+    <rect x="0" y="86" width="0" height="6" rx="3" fill="#ff8844" opacity="0.8">
+      <animate attributeName="width" values="0;130;0" dur="2.5s" repeatCount="indefinite" begin="1s"/>
+    </rect>
+
+    <!-- Bar 4 -->
+    <text x="0" y="106" font-family="'Courier New', monospace" font-size="9" fill="#4488aa">● DATA STREAM</text>
+    <rect x="0" y="113" width="200" height="6" rx="3" fill="#0a1a3a" stroke="#1a4a7a" stroke-width="0.5"/>
+    <rect x="0" y="113" width="0" height="6" rx="3" fill="#aa66ff" opacity="0.8">
+      <animate attributeName="width" values="0;300;0" dur="3.5s" repeatCount="indefinite" begin="0.3s"/>
+    </rect>
+  </g>
+
+  <!-- ============ FINGERPRINT (Right Side) ============ -->
+  <g transform="translate(600, 230)">
+    <!-- Scan ring -->
+    <circle cx="80" cy="60" r="58" fill="none" stroke="#1a4a7a" stroke-width="1" opacity="0.3"/>
+
+    <!-- Fingerprint arcs -->
+    <g stroke="#66ddff" stroke-width="2" fill="none" opacity="0.6" filter="url(#softGlow)">
+      <!-- Outer arc -->
+      <path d="M 30 80 Q 40 30 80 20 Q 120 30 130 80"/>
+      <!-- Second arc -->
+      <path d="M 35 70 Q 45 40 80 32 Q 115 40 125 70"/>
+      <!-- Third arc -->
+      <path d="M 40 60 Q 50 45 80 40 Q 110 45 120 60"/>
+      <!-- Fourth arc -->
+      <path d="M 45 52 Q 55 48 80 46 Q 105 48 115 52"/>
+      <!-- Inner arc -->
+      <path d="M 50 46 Q 60 44 80 43 Q 100 44 110 46"/>
+      <!-- Small inner -->
+      <path d="M 60 42 Q 70 41 80 41 Q 90 41 100 42"/>
+      <!-- Center -->
+      <circle cx="80" cy="42" r="4" stroke-width="1.5" fill="#66ddff" opacity="0.4"/>
+    </g>
+
+    <!-- Scanning line -->
+    <line x1="22" y1="0" x2="22" y2="120" stroke="#44ddff" stroke-width="1" opacity="0.4">
+      <animate attributeName="x1" values="22;138;22" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="22;138;22" dur="2.5s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Horizontal scan line -->
+    <line x1="20" y1="60" x2="140" y2="60" stroke="#66ddff" stroke-width="1.5" opacity="0.6" filter="url(#glow)">
+      <animate attributeName="y1" values="15;105;15" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="15;105;15" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Corner brackets -->
+    <g stroke="#66ddff" stroke-width="1.5" opacity="0.5">
+      <path d="M 18 10 L 18 18 L 26 18"/>
+      <path d="M 142 10 L 142 18 L 134 18"/>
+      <path d="M 18 110 L 18 102 L 26 102"/>
+      <path d="M 142 110 L 142 102 L 134 102"/>
+    </g>
+
+    <!-- Fingerprint label -->
+    <text x="80" y="135" font-family="'Courier New', monospace" font-size="9" fill="#4488dd" text-anchor="middle" opacity="0.7">SCANNING...</text>
+  </g>
+
+  <!-- ============ DECORATIVE ELEMENTS ============ -->
+
+  <!-- Top left corner decorative -->
+  <path d="M 15 15 L 15 40 M 15 15 L 40 15" stroke="#4488dd" stroke-width="1.5" opacity="0.3" fill="none"/>
+
+  <!-- Bottom right corner decorative -->
+  <path d="M 785 485 L 785 460 M 785 485 L 760 485" stroke="#4488dd" stroke-width="1.5" opacity="0.3" fill="none"/>
+
+  <!-- Small floating particles -->
+  <g opacity="0.15">
+    <circle cx="450" cy="50" r="2" fill="#66ddff">
+      <animate attributeName="cy" values="50;40;50" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.3;0.15" dur="3s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="350" cy="200" r="10" fill="none" stroke="#4a9eff" stroke-width="0.5" opacity="0.4">
-      <animate attributeName="r" values="7;16;7" dur="4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0;0.6" dur="4s" repeatCount="indefinite"/>
+    <circle cx="380" cy="180" r="1.5" fill="#88ffaa">
+      <animate attributeName="cx" values="380;390;380" dur="4s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="600" cy="220" r="10" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.4">
-      <animate attributeName="r" values="5;13;5" dur="3.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0;0.6" dur="3.5s" repeatCount="indefinite"/>
+    <circle cx="700" cy="190" r="1.5" fill="#ff88aa">
+      <animate attributeName="cy" values="190;180;190" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="420" cy="400" r="2" fill="#66ddff">
+      <animate attributeName="cy" values="400;390;400" dur="3.5s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- ===== FINGERPRINT ===== -->
-  <g transform="translate(560, 80)" filter="url(#softGlow)">
-    <!-- Fingerprint ridges -->
-    <ellipse cx="0" cy="0" rx="45" ry="55" fill="none" stroke="url(#fpGrad)" stroke-width="2" opacity="0.5"/>
-    <ellipse cx="0" cy="0" rx="38" ry="47" fill="none" stroke="url(#fpGrad)" stroke-width="1.8" opacity="0.6"/>
-    <ellipse cx="0" cy="0" rx="31" ry="39" fill="none" stroke="url(#fpGrad)" stroke-width="1.6" opacity="0.7"/>
-    <ellipse cx="0" cy="0" rx="24" ry="31" fill="none" stroke="url(#fpGrad)" stroke-width="1.4" opacity="0.75"/>
-    <ellipse cx="0" cy="0" rx="17" ry="23" fill="none" stroke="url(#fpGrad)" stroke-width="1.2" opacity="0.8"/>
-    <ellipse cx="0" cy="0" rx="10" ry="15" fill="none" stroke="url(#fpGrad)" stroke-width="1" opacity="0.85"/>
-    <ellipse cx="0" cy="0" rx="4" ry="7" fill="none" stroke="url(#fpGrad)" stroke-width="0.8" opacity="0.9"/>
-
-    <!-- Fingerprint arc lines (top) -->
-    <path d="M-35,-30 Q-20,-45 0,-48 Q20,-45 35,-30" fill="none" stroke="url(#fpGrad)" stroke-width="1.5" opacity="0.5"/>
-    <path d="M-30,-25 Q-15,-38 0,-40 Q15,-38 30,-25" fill="none" stroke="url(#fpGrad)" stroke-width="1.3" opacity="0.6"/>
-    <path d="M-25,-20 Q-12,-31 0,-33 Q12,-31 25,-20" fill="none" stroke="url(#fpGrad)" stroke-width="1.1" opacity="0.7"/>
-
-    <!-- Fingerprint arc lines (bottom) -->
-    <path d="M-35,30 Q-20,45 0,48 Q20,45 35,30" fill="none" stroke="url(#fpGrad)" stroke-width="1.5" opacity="0.5"/>
-    <path d="M-30,25 Q-15,38 0,40 Q15,38 30,25" fill="none" stroke="url(#fpGrad)" stroke-width="1.3" opacity="0.6"/>
-    <path d="M-25,20 Q-12,31 0,33 Q12,31 25,20" fill="none" stroke="url(#fpGrad)" stroke-width="1.1" opacity="0.7"/>
-
-    <!-- Center core -->
-    <ellipse cx="0" cy="0" rx="3" ry="5" fill="#4af0ff" opacity="0.6">
-      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
-    </ellipse>
-
-    <!-- Label -->
-    <text x="0" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4a9eff" opacity="0.7">FINGERPRINT</text>
-    <text x="0" y="82" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#4a9eff" opacity="0.4">AUTHENTICATION</text>
-  </g>
-
-  <!-- ===== CODE BLOCK ===== -->
-  <g transform="translate(60, 430)" filter="url(#glow)">
-    <!-- Code window background -->
-    <rect x="0" y="0" width="400" height="140" rx="6" fill="#0a1a2e" stroke="#1a5a8a" stroke-width="1" opacity="0.85"/>
-    <!-- Window controls -->
-    <circle cx="15" cy="14" r="4" fill="#ff5f56" opacity="0.7"/>
-    <circle cx="29" cy="14" r="4" fill="#ffbd2e" opacity="0.7"/>
-    <circle cx="43" cy="14" r="4" fill="#27c93f" opacity="0.7"/>
-
-    <!-- Code lines -->
-    <text x="15" y="40" font-family="Consolas, Courier New, monospace" font-size="11" fill="#6aafff" opacity="0.8">
-      <tspan fill="#4a9eff">function</tspan> <tspan fill="#00d4ff">authenticate</tspan>(<tspan fill="#ffbd2e">user</tspan>) {
-    </text>
-    <text x="15" y="58" font-family="Consolas, Courier New, monospace" font-size="11" fill="#6aafff" opacity="0.7">
-      <tspan fill="#27c93f">const</tspan> <tspan fill="#ffbd2e">hash</tspan> = <tspan fill="#4a9eff">createHash</tspan>(<tspan fill="#ff6b6b">"sha256"</tspan>);
-    </text>
-    <text x="15" y="76" font-family="Consolas, Courier New, monospace" font-size="11" fill="#6aafff" opacity="0.7">
-      <tspan fill="#ffbd2e">let</tspan> <tspan fill="#00d4ff">token</tspan> = <tspan fill="#4a9eff">generateToken</tspan>(<tspan fill="#ffbd2e">user</tspan>.<tspan fill="#6aafff">id</tspan>);
-    </text>
-    <text x="15" y="94" font-family="Consolas, Courier New, monospace" font-size="11" fill="#6aafff" opacity="0.7">
-      <tspan fill="#ff6b6b">return</tspan> <tspan fill="#4a9eff">verify</tspan>(<tspan fill="#ffbd2e">hash</tspan>, <tspan fill="#00d4ff">token</tspan>);
-    </text>
-    <text x="15" y="112" font-family="Consolas, Courier New, monospace" font-size="11" fill="#6aafff" opacity="0.6">
-      }
-    </text>
-  </g>
-
-  <!-- ===== DECORATIVE CODE SNIPPETS ===== -->
-  <g filter="url(#glow)">
-    <text x="500" y="480" font-family="Consolas, Courier New, monospace" font-size="9" fill="#4a9eff" opacity="0.4">
-      <tspan>│ 0x7F3A  │ 0x9B2E  │ 0x4D1F  │</tspan>
-    </text>
-    <text x="500" y="495" font-family="Consolas, Courier New, monospace" font-size="9" fill="#4a9eff" opacity="0.35">
-      <tspan>│ 0xC8A1  │ 0x5E7B  │ 0x2F9C  │</tspan>
-    </text>
-    <text x="500" y="510" font-family="Consolas, Courier New, monospace" font-size="9" fill="#4a9eff" opacity="0.3">
-      <tspan>│ 0x1D4E  │ 0x6A3F  │ 0xB8C2  │</tspan>
-    </text>
-  </g>
-
-  <!-- ===== BINARY DATA STREAM ===== -->
-  <g filter="url(#glow)">
-    <text x="620" y="530" font-family="Consolas, Courier New, monospace" font-size="8" fill="#00d4ff" opacity="0.3">
-      <tspan>01001110 01100101 01110100</tspan>
-    </text>
-    <text x="620" y="542" font-family="Consolas, Courier New, monospace" font-size="8" fill="#4a9eff" opacity="0.25">
-      <tspan>01110111 01101111 01110010</tspan>
-    </text>
-    <text x="620" y="554" font-family="Consolas, Courier New, monospace" font-size="8" fill="#00d4ff" opacity="0.2">
-      <tspan>01101011 00100000 01110011</tspan>
-    </text>
-    <text x="620" y="566" font-family="Consolas, Courier New, monospace" font-size="8" fill="#4a9eff" opacity="0.15">
-      <tspan>01100101 01100011 01110101</tspan>
-    </text>
-    <text x="620" y="578" font-family="Consolas, Courier New, monospace" font-size="8" fill="#00d4ff" opacity="0.12">
-      <tspan>01110010 01101001 01110100</tspan>
-    </text>
-  </g>
-
-  <!-- ===== HASH / KEY INDICATOR ===== -->
-  <g transform="translate(130, 80)" filter="url(#softGlow)">
-    <text font-family="Consolas, monospace" font-size="12" fill="#4a9eff" opacity="0.5">
-      <tspan>🔑 0x3F2A·B8E1·D4C9·6F7A</tspan>
-    </text>
-  </g>
-
-  <!-- ===== STATUS INDICATOR ===== -->
-  <g transform="translate(640, 460)">
-    <circle cx="0" cy="0" r="3" fill="#27c93f" opacity="0.8">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+  <!-- Status LED indicators -->
+  <g transform="translate(300, 450)">
+    <circle cx="0" cy="0" r="4" fill="#44ff88" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="1.5s" repeatCount="indefinite"/>
     </circle>
-    <text x="10" y="3" font-family="Consolas, monospace" font-size="9" fill="#4a9eff" opacity="0.5">SECURE CONNECTION</text>
+    <text x="10" y="3" font-family="'Courier New', monospace" font-size="8" fill="#4488aa">ACTIVE</text>
+
+    <circle cx="80" cy="0" r="4" fill="#ff8844">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="90" y="3" font-family="'Courier New', monospace" font-size="8" fill="#4488aa">SYNC</text>
   </g>
 
-  <!-- ===== LOCK ICON ===== -->
-  <g transform="translate(720, 50)" filter="url(#glow)">
-    <rect x="-8" y="-2" width="16" height="12" rx="2" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.5"/>
-    <path d="M-5,-2 L-5,-6 Q-5,-12 0,-12 Q5,-12 5,-6 L5,-2" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.5"/>
-    <circle cx="0" cy="4" r="2" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.4"/>
-    <rect x="-1.5" y="3" width="3" height="3" fill="#4a9eff" opacity="0.3"/>
-  </g>
+  <!-- Version text -->
+  <text x="690" y="475" font-family="'Courier New', monospace" font-size="8" fill="#1a4a7a" opacity="0.5">v3.2.1 ● SECURE</text>
 
-  <!-- ===== ANGLED ACCENT LINES ===== -->
-  <line x1="0" y1="0" x2="40" y2="0" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
-  <line x1="0" y1="0" x2="0" y2="40" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
-  <line x1="800" y1="0" x2="760" y2="0" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
-  <line x1="800" y1="0" x2="800" y2="40" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
-  <line x1="0" y1="600" x2="40" y2="600" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
-  <line x1="0" y1="600" x2="0" y2="560" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
-  <line x1="800" y1="600" x2="760" y2="600" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
-  <line x1="800" y1="600" x2="800" y2="560" stroke="#4a9eff" stroke-width="2" opacity="0.3"/>
-
-  <!-- ===== SUBTLE SCANNING LINE ===== -->
-  <line x1="50" y1="300" x2="750" y2="300" stroke="#00d4ff" stroke-width="0.5" opacity="0.05">
-    <animate attributeName="y1" values="100;500;100" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="100;500;100" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.02;0.08;0.02" dur="8s" repeatCount="indefinite"/>
-  </line>
 </svg>
