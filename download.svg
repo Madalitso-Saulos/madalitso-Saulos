@@ -24,12 +24,16 @@
 <feMergeNode in="SourceGraphic"/>
 </feMerge>
 </filter>
-  
-<filter id="textGlowRed" x="-50%" y="-50%" width="200%" height="200%">
-<feDropShadow dx="0" dy="0" stdDeviation="1.4" flood-color="#b5342c" flood-opacity="0.55"/>
-</filter>
-<filter id="textGlowWhite" x="-50%" y="-50%" width="200%" height="200%">
-<feDropShadow dx="0" dy="0" stdDeviation="1.2" flood-color="#e8e8e8" flood-opacity="0.35"/>
+
+<filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+  <feGaussianBlur stdDeviation="5" result="blur1"/>
+  <feGaussianBlur stdDeviation="2" result="blur2"/>
+
+  <feMerge>
+    <feMergeNode in="blur1"/>
+    <feMergeNode in="blur2"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
 </filter>
 <clipPath id="frame">
 <rect x="0" y="0" width="800" height="260" rx="12"/>
