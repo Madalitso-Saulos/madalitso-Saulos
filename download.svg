@@ -143,4 +143,51 @@ Thanks for visiting here :)
 <animate attributeName="cy" values="180;170;180" dur="3s" repeatCount="indefinite"/>
 </circle>
 </g>
+  <!-- Loading Label -->
+<text x="20" y="248"
+      fill="#00ff99"
+      font-family="'Courier New', monospace"
+      font-size="12"
+      filter="url(#textGlowWhite)">
+  Loading...
+</text>
+
+<!-- Loading Bar Background -->
+<rect x="95" y="240"
+      width="180"
+      height="8"
+      rx="4"
+      fill="#0d0d0d"
+      stroke="#00ff99"
+      stroke-width="0.8"/>
+
+<!-- Loading Bar Fill -->
+<rect x="95" y="240"
+      width="0"
+      height="8"
+      rx="4"
+      fill="#00ff99">
+  <animate
+      attributeName="width"
+      values="0;180"
+      dur="6s"
+      repeatCount="indefinite"/>
+</rect>
+
+<!-- Percentage -->
+<text x="285" y="248"
+      fill="#00ff99"
+      font-family="'Courier New', monospace"
+      font-size="12"
+      filter="url(#textGlowWhite)">
+  <tspan>0%</tspan>
+
+  <animate
+      attributeName="opacity"
+      values="1;0;1"
+      dur="0.06s"
+      repeatCount="indefinite"/>
+
+  <set attributeName="display" to="inline" begin="0s"/>
+</text>
 </svg>
