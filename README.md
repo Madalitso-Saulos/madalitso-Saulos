@@ -15,10 +15,10 @@
 ## `~$` whoami
 
 ```bash
-> name         : Madalitso Saulos
-> role         : Software Developer / Network Engineer / Cybersecurity Student
-> focus        : Secure systems, resilient networks, clean code
-> currently    : Studying cybersecurity while shipping full-stack + network tooling
+> NAME        : Madalitso Saulos
+> ROLE         : Software Developer / Network Engineer / Cybersecurity Student
+> FOCUS        : Secure systems, resilient networks, clean code
+> CURRENTLY    : Studying Computer Systems & Security @ Malawi University of Science and Technology
 > status       : Open to collaboration on open-source security & dev projects
 ```
 
