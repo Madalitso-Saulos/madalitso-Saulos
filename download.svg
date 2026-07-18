@@ -23,14 +23,6 @@
 <rect width="800" height="300" fill="#05080f"/>
 
 
-<!-- Digital Grid -->
-<g opacity="0.12" stroke="#00ffff">
-<path d="M0 50H800 M0 100H800 M0 150H800 M0 200H800 M0 250H800"/>
-<path d="M100 0V300 M200 0V300 M300 0V300 M400 0V300 M500 0V300 M600 0V300 M700 0V300"/>
-</g>
-
-
-
 <!-- Network Connections -->
 <g stroke="#00ffff" stroke-width="1" opacity="0.6">
 
