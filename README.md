@@ -59,8 +59,12 @@
 <br/>
 
 ```bash
-$ echo "Think like an attacker. Build like a defender."
+> root@security:~$ echo "Think like an attacker. Build like a defender."
 
-✓ Security is earned every day, not installed once.
+"Attackers search for one weakness.
+Defenders strengthen every layer."
 
-<sub> Securing systems, one commit at a time.</sub>
+> Security is not a destination.
+> It is a continuous commitment to learning,
+> adapting, and protecting.
+
