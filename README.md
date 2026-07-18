@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero-fingerprint.svg" width="100%" alt="Animated digital fingerprint and network hero banner"/>
+<img src="hero-fingerprint.svg" width="100%" alt="Animated digital fingerprint and network hero banner"/>
 
 </div>
 
