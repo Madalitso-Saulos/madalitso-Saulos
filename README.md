@@ -103,47 +103,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=transparent&height=40&section=divider&color=00BFFF" width="100%"/>
 
-<!-- ================= PROJECTS ================= -->
-## `~$` featured projects
-
-<table width="100%">
-<tr>
-<td width="50%" valign="top">
-
-###  Network Sentinel
-Real-time network topology scanner and packet-flow visualizer built for SOC-style monitoring.
-
-`Python` `Scapy` `Sockets` `Flask`
-
-</td>
-<td width="50%" valign="top">
-
-###  SecureAuth Toolkit
-A hardened authentication and session-management library with fingerprint-style multi-factor verification.
-
-`TypeScript` `Node.js` `JWT` `PostgreSQL`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🕸️ Recon Automation Suite
-Bash + Python pipeline chaining Nmap, Wireshark captures, and custom scripts for repeatable recon workflows.
-
-`Bash` `Python` `Nmap` `Wireshark`
-
-</td>
-<td width="50%" valign="top">
-
-### ⚙️ DevOps Pipeline Starter
-Dockerized CI/CD template with automated linting, testing, and secure deployment gates.
-
-`Docker` `GitHub Actions` `MySQL`
-
-</td>
-</tr>
-</table>
 
 <br/>
 
@@ -163,8 +122,6 @@ $ python3 recon.py --target 10.0.0.0/24 --verbose
 ```
 
 <br/>
-
-<br/><br/>
 
 <sub> Securing systems, one commit at a time.</sub>
 
