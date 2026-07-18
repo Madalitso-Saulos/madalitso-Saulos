@@ -1,4 +1,4 @@
-<svg width="1200" height="400" viewBox="0 0 1200 400"
+<svg width="1200" height="640" viewBox="0 0 1200 640"
      xmlns="http://www.w3.org/2000/svg">
 
   <defs>
@@ -24,6 +24,16 @@
       <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
     </linearGradient>
 
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ffcf"/>
+      <stop offset="100%" stop-color="#0091ff"/>
+    </linearGradient>
+
+    <linearGradient id="footerFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.08"/>
+    </linearGradient>
+
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
@@ -35,6 +45,14 @@
     <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="1.4"/>
     </filter>
+
+    <filter id="strongGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
   <!-- Background -->
@@ -42,20 +60,20 @@
 
   <!-- Fine grid -->
   <g opacity="0.05">
-    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M0 320 H1200" stroke="#00ffff"/>
-    <path d="M100 0 V400 M200 0 V400 M300 0 V400 M400 0 V400
-             M500 0 V400 M600 0 V400 M700 0 V400 M800 0 V400
-             M900 0 V400 M1000 0 V400 M1100 0 V400" stroke="#00ffff"/>
+    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M0 320 H1200 M0 400 H1200 M0 480 H1200 M0 560 H1200" stroke="#00ffff"/>
+    <path d="M100 0 V640 M200 0 V640 M300 0 V640 M400 0 V640
+             M500 0 V640 M600 0 V640 M700 0 V640 M800 0 V640
+             M900 0 V640 M1000 0 V640 M1100 0 V640" stroke="#00ffff"/>
   </g>
 
   <!-- Outer frame for a polished, contained look -->
-  <rect x="6" y="6" width="1188" height="388" rx="10"
+  <rect x="6" y="6" width="1188" height="628" rx="10"
         fill="none" stroke="#00d4ff" stroke-opacity="0.25" stroke-width="1.5"/>
 
   <!-- ============ LEFT: BRAND PANEL ============ -->
   <g>
-    <rect x="0" y="0" width="390" height="400" fill="url(#panelFade)"/>
-    <line x1="390" y1="20" x2="390" y2="380" stroke="#00d4ff" stroke-opacity="0.3" stroke-width="1"/>
+    <rect x="0" y="0" width="390" height="640" fill="url(#panelFade)"/>
+    <line x1="390" y1="20" x2="390" y2="620" stroke="#00d4ff" stroke-opacity="0.3" stroke-width="1"/>
 
     <!-- Mark -->
     <g transform="translate(48,58)" filter="url(#glow)">
@@ -83,7 +101,35 @@
       High-speed internet &#183; Printing &#183; IT support
     </text>
 
-    <text x="48" y="340" fill="#4fe3d1" font-size="12" letter-spacing="2"
+    <!-- ===== Cybersecurity shield badge ===== -->
+    <g transform="translate(48,290)">
+      <g filter="url(#strongGlow)">
+        <path d="M40 0 L78 14 V52 C78 84 58 104 40 114 C22 104 2 84 2 52 V14 Z"
+              fill="none" stroke="url(#shieldGrad)" stroke-width="2.5"/>
+      </g>
+      <path d="M40 0 L78 14 V52 C78 84 58 104 40 114 C22 104 2 84 2 52 V14 Z"
+            fill="#00d4ff" fill-opacity="0.06"/>
+      <!-- lock -->
+      <rect x="24" y="48" width="32" height="24" rx="3" fill="none" stroke="#00ffcf" stroke-width="2"/>
+      <path d="M30 48 V38 a10 10 0 0 1 20 0 V48" fill="none" stroke="#00ffcf" stroke-width="2"/>
+      <circle cx="40" cy="60" r="3" fill="#00ffcf">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+
+      <text x="98" y="20" fill="#e6f6fb" font-size="13" font-weight="600"
+            font-family="'Segoe UI', Helvetica, Arial, sans-serif">SECURE ACCESS</text>
+      <text x="98" y="42" fill="#00ff95" font-size="12"
+            font-family="Consolas, 'Courier New', monospace">firewall: enabled</text>
+      <text x="98" y="62" fill="#00ff95" font-size="12"
+            font-family="Consolas, 'Courier New', monospace">encryption: AES-256</text>
+      <text x="98" y="82" fill="#00ff95" font-size="12"
+            font-family="Consolas, 'Courier New', monospace">
+        threat_scan: clear
+        <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <text x="48" y="576" fill="#4fe3d1" font-size="12" letter-spacing="2"
           font-family="Consolas, 'Courier New', monospace" opacity="0.85">
       POWERED BY SAULOS TECH
     </text>
@@ -151,9 +197,35 @@
           font-family="Consolas, 'Courier New', monospace">
       SESSION READY &#8226; NODE-014 &#8226; UPTIME 99.98%
     </text>
+
+    <!-- ===== Cybersecurity console: threat log ===== -->
+    <text x="0" y="410" fill="#00e5ff" font-size="14" letter-spacing="2"
+          font-family="Consolas, 'Courier New', monospace" filter="url(#glow)">
+      SECURITY OPERATIONS LOG
+    </text>
+
+    <rect x="0" y="424" width="360" height="150" rx="8"
+          fill="#061019" stroke="#00d4ff" stroke-opacity="0.35" stroke-width="1"/>
+
+    <g font-family="Consolas, 'Courier New', monospace" font-size="12.5">
+      <text x="16" y="450" fill="#00ff95">[OK] intrusion_detection --status</text>
+      <text x="16" y="472" fill="#00ff95">[OK] vpn_tunnel.connect(client_014)</text>
+      <text x="16" y="494" fill="#ffbd2e">[WARN] port_scan detected: 192.168.x.x</text>
+      <text x="16" y="516" fill="#00ff95">[OK] auto_block(source_ip); logged;</text>
+      <text x="16" y="538" fill="#00ff95">
+        [OK] malware_scan: 0 threats found
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </text>
+      <text x="16" y="560" fill="#7fe9ff">$ tail -f /var/log/secure.log_</text>
+    </g>
+
+    <!-- blinking cursor on log -->
+    <rect x="196" y="550" width="7" height="12" fill="#7fe9ff">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
   </g>
 
-  <!-- ============ RIGHT: NETWORK ============ -->
+  <!-- ============ RIGHT: NETWORK + SCAN RADAR ============ -->
   <g transform="translate(850,50)">
 
     <!-- Links -->
@@ -204,6 +276,61 @@
     <text x="0" y="222" fill="#00ff95" font-size="12" letter-spacing="1"
           font-family="Consolas, 'Courier New', monospace">
       NETWORK STATUS : CONNECTED
+    </text>
+
+    <!-- ===== Radar / scanning sweep ===== -->
+    <g transform="translate(160,330)">
+      <text x="-160" y="-10" fill="#00e5ff" font-size="13" letter-spacing="2"
+            font-family="Consolas, 'Courier New', monospace">THREAT RADAR</text>
+
+      <circle r="90" fill="#061019" stroke="#00d4ff" stroke-opacity="0.4" stroke-width="1.5"/>
+      <circle r="60" fill="none" stroke="#00d4ff" stroke-opacity="0.25" stroke-width="1"/>
+      <circle r="30" fill="none" stroke="#00d4ff" stroke-opacity="0.25" stroke-width="1"/>
+      <line x1="-90" y1="0" x2="90" y2="0" stroke="#00d4ff" stroke-opacity="0.2"/>
+      <line x1="0" y1="-90" x2="0" y2="90" stroke="#00d4ff" stroke-opacity="0.2"/>
+
+      <!-- sweep -->
+      <g>
+        <path d="M0 0 L0 -90 A90 90 0 0 1 63.6 -63.6 Z" fill="#00ffb0" opacity="0.25"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0"
+                           dur="4s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- blips -->
+      <circle cx="35" cy="-20" r="3.5" fill="#ff5f56">
+        <animate attributeName="opacity" values="0;1;0" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-50" cy="30" r="3.5" fill="#ffbd2e">
+        <animate attributeName="opacity" values="0;1;0" dur="3.5s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="20" cy="55" r="3.5" fill="#00ff95">
+        <animate attributeName="opacity" values="0;1;0" dur="2.8s" begin="0.2s" repeatCount="indefinite"/>
+      </circle>
+
+      <circle r="4" fill="#00ffcf" filter="url(#glow)"/>
+    </g>
+
+    <!-- code snippet beside radar -->
+    <g font-family="Consolas, 'Courier New', monospace" font-size="11.5" fill="#00ff95">
+      <text x="-40" y="470">scan.run(target="LAN");</text>
+      <text x="-40" y="490">alerts.push(anomaly);</text>
+      <text x="-40" y="510">status = "SECURED";
+        <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
+      </text>
+    </g>
+  </g>
+
+  <!-- ============ FOOTER STRIP ============ -->
+  <rect x="6" y="596" width="1188" height="38" fill="url(#footerFade)"/>
+  <line x1="0" y1="596" x2="1200" y2="596" stroke="#00d4ff" stroke-opacity="0.25" stroke-width="1"/>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#7fe9ff" opacity="0.85">
+    <text x="30" y="620">SSL/TLS SECURED</text>
+    <text x="240" y="620">24/7 MONITORING</text>
+    <text x="470" y="620">DATA PRIVACY COMPLIANT</text>
+    <text x="760" y="620">BACKUP: AUTOMATED</text>
+    <text x="990" y="620">
+      UPTIME 99.98%
+      <animate attributeName="opacity" values="0.85;0.4;0.85" dur="2.5s" repeatCount="indefinite"/>
     </text>
   </g>
 
