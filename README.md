@@ -23,6 +23,7 @@
 ```
 
 <br/>
+
 ## `~$` CyberQoute
 
 ```bash
@@ -31,4 +32,3 @@ $ echo "Think like an attacker. Build like a defender."
 ✓ Security is earned every day, not installed once.
 
 
-</div>
