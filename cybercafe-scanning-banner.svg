@@ -1,4 +1,4 @@
-<svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="600" height="160" viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>Cybercafe Saulos Techspace</title>
   <desc>Professional GitHub banner with fingerprint scanning interface and welcome message</desc>
   
@@ -9,14 +9,19 @@
       <stop offset="100%" stop-color="#030b18"/>
     </radialGradient>
     <linearGradient id="fpStroke" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#8cf0ff"/>
-      <stop offset="50%" stop-color="#3acce8"/>
-      <stop offset="100%" stop-color="#1a85b8"/>
+      <stop offset="0%" stop-color="#7ae4ff"/>
+      <stop offset="40%" stop-color="#3acce8"/>
+      <stop offset="100%" stop-color="#1a7aaa"/>
+    </linearGradient>
+    <linearGradient id="fpStrokeDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5fc8e0"/>
+      <stop offset="50%" stop-color="#2aadc8"/>
+      <stop offset="100%" stop-color="#0f6a8f"/>
     </linearGradient>
     <linearGradient id="beamGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#8cf0ff" stop-opacity="0"/>
-      <stop offset="40%" stop-color="#c8faff" stop-opacity="0.9"/>
-      <stop offset="60%" stop-color="#c8faff" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#c8faff" stop-opacity="0.9"/>
+      <stop offset="65%" stop-color="#c8faff" stop-opacity="0.9"/>
       <stop offset="100%" stop-color="#3acce8" stop-opacity="0"/>
     </linearGradient>
     <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
@@ -24,22 +29,22 @@
       <stop offset="100%" stop-color="#d4feff" stop-opacity="0"/>
     </radialGradient>
     <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <filter id="bigGlow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="7"/>
+      <feGaussianBlur stdDeviation="6"/>
     </filter>
     <filter id="haloGlow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="10"/>
+      <feGaussianBlur stdDeviation="8"/>
     </filter>
     <clipPath id="fpClip">
-      <circle cx="430" cy="100" r="56"/>
+      <circle cx="430" cy="80" r="50"/>
     </clipPath>
     
     <style>
-      .scanline { animation: scan 3s ease-in-out infinite; }
-      @keyframes scan { 0%,100% { transform: translateY(-50px); } 50% { transform: translateY(50px); } }
+      .scanline { animation: scan 2.8s ease-in-out infinite; }
+      @keyframes scan { 0%,100% { transform: translateY(-42px); } 50% { transform: translateY(42px); } }
       .pulseWord { animation: pulseW 1.8s ease-in-out infinite; }
       @keyframes pulseW { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
       .dotBlink { animation: blink 1.4s steps(1) infinite; }
@@ -50,78 +55,94 @@
       .ring { animation: ringPulse 3s ease-in-out infinite; }
       @keyframes ringPulse { 0%,100% { opacity: 0.3; } 50% { opacity: 0.8; } }
       .haloPulse { animation: haloP 2.6s ease-in-out infinite; }
-      @keyframes haloP { 0%,100% { opacity: 0.25; } 50% { opacity: 0.55; } }
+      @keyframes haloP { 0%,100% { opacity: 0.2; } 50% { opacity: 0.5; } }
+      .fp-extra { animation: fpFade 5s ease-in-out infinite; }
+      @keyframes fpFade { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
     </style>
   </defs>
 
   <!-- Background -->
-  <rect x="0" y="0" width="600" height="200" fill="url(#bgGlow)"/>
+  <rect x="0" y="0" width="600" height="160" fill="url(#bgGlow)"/>
 
   <!-- Subtle grid lines -->
-  <g stroke="#1a4d78" stroke-width="0.5" opacity="0.3">
-    <line x1="0" y1="48" x2="600" y2="48"/>
-    <line x1="0" y1="158" x2="600" y2="158"/>
-    <line x1="120" y1="0" x2="120" y2="200"/>
-    <line x1="260" y1="0" x2="260" y2="200"/>
+  <g stroke="#1a4d78" stroke-width="0.5" opacity="0.25">
+    <line x1="0" y1="38" x2="600" y2="38"/>
+    <line x1="0" y1="126" x2="600" y2="126"/>
+    <line x1="120" y1="0" x2="120" y2="160"/>
+    <line x1="260" y1="0" x2="260" y2="160"/>
   </g>
 
   <!-- Welcome header -->
-  <text x="22" y="28" font-family="monospace" font-size="13" letter-spacing="0.5" fill="#8cf0ff" filter="url(#softGlow)">WELCOME TO CYBERCAFE</text>
-  <text x="22" y="46" font-family="monospace" font-size="15" letter-spacing="0.8" fill="#5fe3ff" filter="url(#softGlow)">Saulos Techspace</text>
+  <text x="22" y="24" font-family="monospace" font-size="12" letter-spacing="0.5" fill="#8cf0ff" filter="url(#softGlow)">WELCOME TO CYBERCAFE</text>
+  <text x="22" y="40" font-family="monospace" font-size="13" letter-spacing="0.8" fill="#5fe3ff" filter="url(#softGlow)">Saulos Techspace</text>
 
   <!-- Code snippet -->
-  <g class="codeFlicker" font-family="monospace" font-size="9.5" fill="#4a9bd0">
-    <text x="22" y="78">const scan = async () =&gt; {</text>
-    <text x="38" y="92">match: false,</text>
-    <text x="22" y="106">};</text>
-    <text x="22" y="128">0x4F2A  0x9C31  0x77E0</text>
-    <text x="22" y="148">if (match) grantAccess();</text>
-    <text x="22" y="168">confidence: 0.9421</text>
+  <g class="codeFlicker" font-family="monospace" font-size="8.5" fill="#4a9bd0">
+    <text x="22" y="64">const scan = async () =&gt; {</text>
+    <text x="36" y="77">match: false,</text>
+    <text x="22" y="90">};</text>
+    <text x="22" y="108">0x4F2A  0x9C31  0x77E0</text>
+    <text x="22" y="126">if (match) grantAccess();</text>
+    <text x="22" y="144">confidence: 0.9421</text>
   </g>
 
   <!-- Fingerprint scanner area -->
-  <circle class="haloPulse" cx="430" cy="100" r="75" fill="#3ad4ef" opacity="0.2" filter="url(#haloGlow)"/>
+  <circle class="haloPulse" cx="430" cy="80" r="68" fill="#3ad4ef" opacity="0.15" filter="url(#haloGlow)"/>
 
-  <g transform="translate(430,100)">
+  <g transform="translate(430,80)">
     <!-- Outer rings -->
-    <circle class="ring" r="66" fill="none" stroke="#1f5f8f" stroke-width="0.6"/>
-    <circle class="ring" r="58" fill="none" stroke="#2b7db0" stroke-width="1" style="animation-delay:0.6s"/>
+    <circle class="ring" r="58" fill="none" stroke="#1f5f8f" stroke-width="0.6"/>
+    <circle class="ring" r="50" fill="none" stroke="#2b7db0" stroke-width="0.9" style="animation-delay:0.6s"/>
 
     <!-- Corner brackets -->
     <g filter="url(#softGlow)">
-      <path d="M-52,-52 h12 M-52,-52 v12" stroke="#8cf0ff" stroke-width="2" stroke-linecap="round" fill="none"/>
-      <path d="M52,-52 h-12 M52,-52 v12" stroke="#8cf0ff" stroke-width="2" stroke-linecap="round" fill="none"/>
-      <path d="M-52,52 h12 M-52,52 v-12" stroke="#8cf0ff" stroke-width="2" stroke-linecap="round" fill="none"/>
-      <path d="M52,52 h-12 M52,52 v-12" stroke="#8cf0ff" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M-45,-45 h10 M-45,-45 v10" stroke="#8cf0ff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <path d="M45,-45 h-10 M45,-45 v10" stroke="#8cf0ff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <path d="M-45,45 h10 M-45,45 v-10" stroke="#8cf0ff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <path d="M45,45 h-10 M45,45 v-10" stroke="#8cf0ff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
     </g>
 
-    <!-- Fingerprint ridges -->
-    <g clip-path="url(#fpClip)" transform="translate(-430,-100)">
-      <g transform="translate(430,100)" fill="none" stroke="url(#fpStroke)" stroke-width="2.2" stroke-linecap="round" filter="url(#softGlow)">
-        <circle r="6" stroke-dasharray="26 3" stroke-dashoffset="4"/>
-        <circle r="12" stroke-dasharray="14 2 20 2" stroke-dashoffset="8"/>
-        <circle r="18" stroke-dasharray="30 3 14 3" stroke-dashoffset="2"/>
-        <circle r="24" stroke-dasharray="38 3 18 3" stroke-dashoffset="14"/>
-        <circle r="30" stroke-dasharray="46 3 26 3" stroke-dashoffset="5"/>
-        <circle r="36" stroke-dasharray="54 3 20 3 18 3" stroke-dashoffset="0"/>
-        <circle r="42" stroke-dasharray="66 3 28 3" stroke-dashoffset="20"/>
-        <circle r="48" stroke-dasharray="74 3 34 3 18 3" stroke-dashoffset="8"/>
-        <circle r="54" stroke-dasharray="84 3 40 4" stroke-dashoffset="28"/>
+    <!-- Fingerprint ridges - darker and with extra prints -->
+    <g clip-path="url(#fpClip)" transform="translate(-430,-80)">
+      <g transform="translate(430,80)" fill="none" stroke="url(#fpStrokeDark)" stroke-width="2.5" stroke-linecap="round" filter="url(#softGlow)">
+        <!-- Inner core -->
+        <circle r="5" stroke-dasharray="18 2" stroke-dashoffset="3"/>
+        <circle r="9" stroke-dasharray="12 2 16 2" stroke-dashoffset="6"/>
+        <circle r="13" stroke-dasharray="26 2 10 2" stroke-dashoffset="1"/>
+        <circle r="17" stroke-dasharray="32 3 14 2" stroke-dashoffset="10"/>
+        <circle r="21" stroke-dasharray="38 3 18 2" stroke-dashoffset="4"/>
+        <circle r="25" stroke-dasharray="44 3 22 3" stroke-dashoffset="15"/>
+        <circle r="29" stroke-dasharray="50 3 16 2 12 2" stroke-dashoffset="0"/>
+        <circle r="33" stroke-dasharray="56 3 20 3 14 2" stroke-dashoffset="20"/>
+        <circle r="37" stroke-dasharray="62 3 24 3 18 3" stroke-dashoffset="8"/>
+        <circle r="41" stroke-dasharray="70 3 28 3 22 3" stroke-dashoffset="25"/>
+        <circle r="45" stroke-dasharray="76 4 32 3" stroke-dashoffset="12"/>
+        <circle r="49" stroke-dasharray="82 4 36 3" stroke-dashoffset="30"/>
+      </g>
+      
+      <!-- Extra fingerprint lines - denser/darker details -->
+      <g transform="translate(430,80)" fill="none" stroke="url(#fpStroke)" stroke-width="1.5" stroke-linecap="round" opacity="0.5" class="fp-extra">
+        <circle r="7" stroke-dasharray="8 3 12 2" stroke-dashoffset="2"/>
+        <circle r="15" stroke-dasharray="18 4 14 3" stroke-dashoffset="7"/>
+        <circle r="23" stroke-dasharray="22 3 16 4 10 2" stroke-dashoffset="0"/>
+        <circle r="31" stroke-dasharray="28 4 20 3 14 3" stroke-dashoffset="12"/>
+        <circle r="39" stroke-dasharray="34 3 24 4 18 3" stroke-dashoffset="5"/>
+        <circle r="47" stroke-dasharray="40 4 28 3 20 4" stroke-dashoffset="18"/>
       </g>
     </g>
 
     <!-- Scanning beam -->
     <g class="scanline">
-      <rect x="-58" y="0" width="116" height="10" fill="url(#beamGrad)"/>
+      <rect x="-52" y="0" width="104" height="8" fill="url(#beamGrad)"/>
       <circle r="3" fill="url(#coreGlow)" filter="url(#bigGlow)"/>
-      <rect x="-58" y="3" width="116" height="1.5" fill="#e8fdff"/>
+      <rect x="-52" y="2.5" width="104" height="1.2" fill="#e8fdff"/>
     </g>
   </g>
 
   <!-- Status -->
-  <text x="430" y="182" text-anchor="middle" font-family="monospace" font-size="13" letter-spacing="3.5" fill="#5fe3ff" class="pulseWord" filter="url(#softGlow)">SCANNING</text>
-  <g transform="translate(498,179)" fill="#5fe3ff">
-    <circle class="dotBlink" cx="0" cy="0" r="1.8"/>
-    <circle class="dotBlink2" cx="7" cy="0" r="1.8"/>
+  <text x="430" y="148" text-anchor="middle" font-family="monospace" font-size="11" letter-spacing="3.5" fill="#5fe3ff" class="pulseWord" filter="url(#softGlow)">SCANNING</text>
+  <g transform="translate(498,145)" fill="#5fe3ff">
+    <circle class="dotBlink" cx="0" cy="0" r="1.6"/>
+    <circle class="dotBlink2" cx="6.5" cy="0" r="1.6"/>
   </g>
 </svg>
