@@ -269,4 +269,69 @@ Thanks for visiting here :)
 <animate attributeName="cy" values="180;170;180" dur="3s" repeatCount="indefinite"/>
 </circle>
 </g>
+
+  <!-- ========================= -->
+<!-- Cybersecurity Radar -->
+<!-- ========================= -->
+<g transform="translate(560 130) scale(0.45)">
+
+  <!-- Background glow -->
+  <circle cx="0" cy="0" r="185" fill="url(#radarGlow)"/>
+
+  <!-- Rings -->
+  <circle cx="0" cy="0" r="150"
+          fill="none"
+          stroke="#00C8FF"
+          stroke-opacity="0.25"
+          stroke-width="1"/>
+
+  <circle cx="0" cy="0" r="110"
+          fill="none"
+          stroke="#00FF88"
+          stroke-opacity="0.25"
+          stroke-width="1"/>
+
+  <circle cx="0" cy="0" r="70"
+          fill="none"
+          stroke="#00C8FF"
+          stroke-opacity="0.25"
+          stroke-width="1"/>
+
+  <!-- Rotating sweep -->
+  <g transform-origin="0 0">
+    <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0"
+        to="360"
+        dur="5s"
+        repeatCount="indefinite"/>
+
+    <path d="M0 0 L0 -185 A185 185 0 0 1 130 -130 Z"
+          fill="url(#radarSweep)"/>
+  </g>
+
+  <!-- Shield -->
+  <path d="M0 -135
+           L100 -100
+           V0
+           C100 60 55 105 0 130
+           C-55 105 -100 60 -100 0
+           V-100 Z"
+        fill="#112240"
+        fill-opacity="0.6"
+        stroke="#00FF88"
+        stroke-width="2"/>
+
+  <!-- Check mark -->
+  <path d="M-40 5
+           L-12 33
+           L45 -32"
+        fill="none"
+        stroke="#00FF88"
+        stroke-width="7"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+</g>
 </svg>
