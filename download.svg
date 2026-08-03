@@ -225,7 +225,7 @@ $ WELCOME TO CYBERCAFE...
 </text>
 
 <text x="20" y="119" fill="#00ff99" filter="url(#textGlowWhite)">
-[ OK ] Saulos Github connected
+[ OK ] Saulo's Github connected
 <animate attributeName="opacity" values="0.9;0.35;0.9" dur="3.9s" repeatCount="indefinite"/>
 </text>
 
