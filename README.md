@@ -20,7 +20,5 @@
 > CURRENTLY    :  Studying Computer Systems & Security @  Malawi University of Science and Technology
 > status       :  Open to collaboration on open-source security & dev projects
 ```
-
 <br/>
-
 ---
