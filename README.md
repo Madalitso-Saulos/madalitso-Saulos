@@ -18,8 +18,8 @@
 > ROLE         :  Software Developer / Network Engineer / Cybersecurity Expert
 > FOCUS        :  Secure systems, resilient networks, clean code
 > CURRENTLY    :  Studying Computer Systems & Security @  Malawi University of Science and Technology
-> status       :  Open to collaboration on open-source security & dev projects
+> STATUS       :  Open to onsite or remote work, collaboration on open-source security & dev projects.
 ```
 <br/>
 
----
+--
