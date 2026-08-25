@@ -1,7 +1,5 @@
 <div align="center">
-
-<!-- <img src="download.svg" width="100%" alt="Animated digital fingerprint and network hero banner"/> -->
-
+  
 </div>
 
 <div align="left">
