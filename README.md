@@ -4,7 +4,7 @@
 
 <div align="left">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=25&duration=2500&pause=700&color=AA4A44&vCenter=true&width=450&height=30&lines=Software+Developement...;Network+Engineering...;Cybersecurity...;Digital+Forensics...;Problem+Solving" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=25&duration=2500&pause=700&color=AA4A44&vCenter=true&width=550&height=30&lines=%24+Initializing+Cyber+Ops...;%24+Scanning+Target+Network...;%24+Enumerating+Services...;%24+Hunting+Threats...;%24+Analyzing+Digital+Evidence...;%24+Exploiting+Vulnerabilities...;%24+Tracing+Attack+Paths...;%24+Securing+The+System..." alt="Typing SVG" />
 
 > Building secure, scalable, and innovative digital solutions through software engineering, networking, and cybersecurity.
 
