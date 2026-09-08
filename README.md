@@ -4,8 +4,6 @@
 
 <div align="left">
 
-<i
-
 > Building secure, scalable, and innovative digital solutions through software engineering, networking, and cybersecurity.
 
 
