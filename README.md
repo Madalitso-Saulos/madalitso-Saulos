@@ -1,7 +1,10 @@
 <div align="center">
 
   <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=26&duration=3000&pause=1200&color=00C8FF&center=true&vCenter=true&width=700&lines=Software+Development;Cybersecurity;Networking;Critical+Thinking" alt="Madalitso Saulos - Skills" />
+
+ <p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=00C8FF&center=true&vCenter=true&width=600&lines=Software+Development;Cybersecurity;Networking;Critical+Thinking" alt="Typing animation" />
+</p>
     
 </p>
 </div>
