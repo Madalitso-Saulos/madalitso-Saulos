@@ -1,5 +1,9 @@
 <div align="center">
-  
+
+  <p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=26&duration=3000&pause=1200&color=00C8FF&center=true&vCenter=true&width=700&lines=Software+Development;Cybersecurity;Networking;Critical+Thinking" alt="Madalitso Saulos - Skills" />
+    
+</p>
 </div>
 
 <div align="left">
