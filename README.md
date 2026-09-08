@@ -9,7 +9,7 @@
 </p>
 </div>
 
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=1000&color=B7410E&background=00000000&center=false&vCenter=true&width=600&lines=%24+Good@+--cybersecurity;%24+Good@+--software development;%24+Good@+--networking" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1000&color=B7410E&background=00000000&center=false&vCenter=true&width=600&lines=%24+Good@+--cybersecurity;%24+Good@+--software-development;%24+Good@+--networking" alt="Typing SVG" />
 
 > Building secure, scalable, and innovative digital solutions through software engineering, networking, and cybersecurity.
 
