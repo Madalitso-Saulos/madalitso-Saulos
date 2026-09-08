@@ -1,21 +1,16 @@
-<div align="center">
-  <p align="center">
-    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Cybersecurity;Software+Development;Networking" alt="Typing SVG" />
-  </p>
-</div>
-
 <div align="left">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=1000&color=B7410E&background=00000000&center=false&vCenter=true&width=600&lines=%24+whoami+--cybersecurity;%24+whoami+--software-development;%24+whoami+--networking" alt="Typing SVG" />
 
-> Building secure, scalable, and innovative digital solutions through software engineering, networking, and cybersecurity.
+  > Building secure, scalable, and innovative digital solutions through software engineering, networking, and cybersecurity.
 
 ## `~$` whoami
-```bash
+\`\`\`bash
 > NAME         :  Madalitso Saulos
 > ROLE         :  Software Developer / Network Engineer / Cybersecurity Expert
 > FOCUS        :  Secure systems, resilient networks, clean code
 > CURRENTLY    :  Studying Computer Systems & Security @ Malawi University of Science and Technology
 > STATUS       :  Open to onsite or remote work, collaboration on open-source security & dev projects.
-```
+\`\`\`
 
 </div>
 
