@@ -42,7 +42,6 @@
 > EMAIL        :  madalitsosaulos@gmail.com
 > GITHUB       :  Madalitso-Saulos
 > LINKEDIN     :  Madalitso Saulos
-> STATUS       :  Open to work, internships & collaborations
 ```
 
 ```bash
