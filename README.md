@@ -26,11 +26,6 @@
 
 ## `~$` contact
 
-```bash
-$ ./connect.sh
-> Available channels:
-```
-
 <p align="left">
   <a href="mailto:madalitsosaulos@gmail.com">
     <img src="https://img.shields.io/badge/Email-B7410E?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
