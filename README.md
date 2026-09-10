@@ -27,7 +27,7 @@
 ## `~$` contact
 
 <p align="left">
-  <a href="mailto:madalitsosaulos@gmail.com">
+  <a href="mailto:saulosmadalitso@gmail.com">
     <img src="https://img.shields.io/badge/Email-B7410E?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
   </a>
   <a href="https://github.com/Madalitso-Saulos">
