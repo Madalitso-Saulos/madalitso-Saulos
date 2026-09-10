@@ -33,16 +33,30 @@ $ ./connect.sh
   </a>
 </p>
 
+## `~$` whoami
+
+```bash
+> NAME         :  Madalitso Saulos
+> ROLE         :  Software Developer / Network Engineer / Cybersecurity Expert
+> FOCUS        :  Secure systems, resilient networks, clean code
+> CURRENTLY    :  Studying Computer Systems & Security @ Malawi University of Science and Technology
+> STATUS       :  Open to onsite or remote work, collaboration on open-source security & dev projects.
+```
+
+## `~$` contact
+
 ```bash
 > EMAIL        :  madalitsosaulos@gmail.com
-> GITHUB       :  Madalitso-Saulos
-> LINKEDIN     :  Madalitso Saulos
-> STATUS       :  Open to work, internships & collaborations
+> GITHUB       :  github.com/Madalitso-Saulos
+> LINKEDIN     :  linkedin.com/in/madalitso-saulos
+> LOCATION     :  Malawi
+> AVAILABILITY :  Open to work, internships & collaborations
 ```
 
 ```bash
 $ echo "Let's build secure and reliable solutions."
 ```
+
 
 <br/>
 
